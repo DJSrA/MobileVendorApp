@@ -1,20 +1,44 @@
-%div.truckentry
-  %div.truckname.container
-    %div
-      =vendor.name
-      %div.truckdescription
-        =vendor.description
-        %br
-        %a{:href => vendor.url, :target => "_blank"}=vendor.url
-        -if vendor.user_id == current_user.id
+-if vendor.approved != false
+  %div.truckentry
+    %div.truckname.container
+      %div
+        =vendor.name
+        %div.truckdescription
+          =vendor.description
+          %br
+          %a{:href => vendor.url, :target => "_blank"}=vendor.url
+          -if vendor.user_id == current_user.id
+            %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
+    %a.distancecontainer
+      %div.numericdistance
+        %span
+          \.75
+      %br
+      %div.distanceunit
+        mi
+-elsif  vendor.approved == false && current_user.admin
+  %div.truckentry
+    %div.truckname.container
+      %div
+        =vendor.name
+        %div.truckdescription
+          =vendor.description
+          %br
+          %a{:href => vendor.url, :target => "_blank"}=vendor.url
           %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
-    
-    
-  
-  %a.distancecontainer
-    %div.numericdistance
-      %span
-        \.75
-    %br
-    %div.distanceunit
-      mi
+          / ______________________________________________________________
+          / YOU ARE TRYING TO FIGURE OUT WHY THE APPROVAL AND DISAPPROVAL BUTTONS AREN'T WORKING!!!!!!!!!
+          / ____________________________________________________________________________
+          - if vendor.approved != true
+            %button.unapproved.btn 
+              = link_to("Pending Approval", vendor_path(vendor, "vendor[approved]" => true), :method => :put, :confirm => "Sure?")
+          -elsif vendor.approved == true
+            %button.unapproved.btn
+              = link_to("Approved", vendor_path(vendor, "vendor[approved]" => false), :method => :put, :confirm => "Sure?")
+    %a.distancecontainer
+      %div.numericdistance
+        %span
+          \.75
+      %br
+      %div.distanceunit
+        mi
