@@ -1,6 +1,6 @@
 class VendorsController < ApplicationController
-  # before_filter :authenticate_user!
-  # before_action :set_vendor, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
+  before_action :set_vendor, only: [:show, :edit, :update, :destroy]
 
   def index
     # @user = current_user
@@ -70,9 +70,9 @@ class VendorsController < ApplicationController
 
   private
 
-    # def set_vendor
-    #   @vendor = Vendor.find(params[:id])
-    # end
+    def set_vendor
+      @vendor = Vendor.find(params[:id])
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_params
