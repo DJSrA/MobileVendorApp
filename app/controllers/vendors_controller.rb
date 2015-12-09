@@ -21,7 +21,9 @@ class VendorsController < ApplicationController
   end
 
   def create
-    @vendor = Vendor.new(vendor_params)
+    # @vendor = Vendor.new(vendor_params)
+    @user = current_user
+    @vendor = @user.vendors.build(vendor_params)
     puts "vendor #{@vendor.inspect}"
     respond_to do |format|
       if @vendor.save

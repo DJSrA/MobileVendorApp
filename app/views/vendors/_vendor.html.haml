@@ -6,7 +6,8 @@
         =vendor.description
         %br
         %a{:href => vendor.url, :target => "_blank"}=vendor.url
-        %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
+        -if vendor.user_id == current_user.id
+          %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
     
     
   
