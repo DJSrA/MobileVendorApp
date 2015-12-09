@@ -1,0 +1,19 @@
+%div.truckentry
+  %div.truckname.container
+    %div
+      =vendor.name
+      %div.truckdescription
+        =vendor.description
+        %br
+        %a{:href => vendor.url, :target => "_blank"}=vendor.url
+        %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
+    
+    
+  
+  %a.distancecontainer
+    %div.numericdistance
+      %span
+        \.75
+    %br
+    %div.distanceunit
+      mi

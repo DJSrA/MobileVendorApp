@@ -1,0 +1,8 @@
+%header
+%div.centeredimagezindex5
+  %div.headergraphic
+%div.headerblue
+
+%div.centeredtruckentries
+  = render partial: "vendor", collection: @vendors
+%button.btn.btn-default.create-button= link_to "+ New Vendor", new_vendor_path

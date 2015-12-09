@@ -1,0 +1,15 @@
+%div.company-description-header-container
+  %li{:class => "job-post-listing"}
+    %div{:class => "header-content col-md-10 col-md-offset-1"}
+      %div{:class =>"center-content col-md-6"}
+        %div{:class => "inline-block job-title-container inline-block"}
+          = @job.title
+      %div{:class => "right-content col-md-3"}    
+    %div{:class => "job-filter-description-container col-md-12"}
+      %ul{:class => "col-md-10 col-md-offset-1"}
+        = @job.company
+        = @job.start_date
+        = @job.end_date
+  %div{:class => "job-description-container col-md-12"}
+    %div.col-md-10.col-md-offset-1
+      = @job.summary
