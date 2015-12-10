@@ -2,7 +2,7 @@
   %div.truckentry
     %div.truckname.container
       %div
-        =vendor.name
+        = link_to vendor.name, controller: "vendors", action: "show", id: vendor
         %div.truckdescription
           =vendor.description
           %br
@@ -16,10 +16,10 @@
             -elsif vendor.approved != false
               %button.unapproved.btn
                 = link_to("Approved", vendor_path(vendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
-    %a.distancecontainer
+    %a.distancecontainer{href: "https://maps.google.com?saddr=Current+Location=#{vendor.latitude},#{vendor.longitude}", target: '_blank'}
       %div.numericdistance
-        %span
-          \.75
+      - if vendor.geocoded?                  
+        = vendor.distance_from([request.location.latitude, request.location.longitude]).round(2)
       %br
       %div.distanceunit
         mi
