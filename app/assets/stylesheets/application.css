@@ -14,11 +14,11 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets";
+/* @import "bootstrap-sprockets";
  @import "bootstrap";
 
  @import "home_page_styles";
-
+*/
 
  @import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
 

@@ -7,8 +7,15 @@
           =vendor.description
           %br
           %a{:href => vendor.url, :target => "_blank"}=vendor.url
-          -if vendor.user_id == current_user.id
+          -if vendor.user_id == current_user.id || current_user.admin
             %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
+          -if current_user.admin
+            - if vendor.approved != true
+              %button.unapproved.btn 
+                = link_to("Pending Approval", vendor_path(vendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
+            -elsif vendor.approved != false
+              %button.unapproved.btn
+                = link_to("Approved", vendor_path(vendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
     %a.distancecontainer
       %div.numericdistance
         %span
@@ -16,7 +23,7 @@
       %br
       %div.distanceunit
         mi
--elsif  vendor.approved == false && current_user.admin
+-elsif current_user.admin == true
   %div.truckentry
     %div.truckname.container
       %div
@@ -26,15 +33,9 @@
           %br
           %a{:href => vendor.url, :target => "_blank"}=vendor.url
           %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
-          / ______________________________________________________________
-          / YOU ARE TRYING TO FIGURE OUT WHY THE APPROVAL AND DISAPPROVAL BUTTONS AREN'T WORKING!!!!!!!!!
-          / ____________________________________________________________________________
           - if vendor.approved != true
             %button.unapproved.btn 
-              = link_to("Pending Approval", vendor_path(vendor, "vendor[approved]" => true), :method => :put, :confirm => "Sure?")
-          -elsif vendor.approved == true
-            %button.unapproved.btn
-              = link_to("Approved", vendor_path(vendor, "vendor[approved]" => false), :method => :put, :confirm => "Sure?")
+              = link_to("Pending Approval", vendor_path(vendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
     %a.distancecontainer
       %div.numericdistance
         %span
