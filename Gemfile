@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'haml'
 gem 'simple_form'
 gem 'devise'
+gem 'geocoder'
 
 gem 'jquery-rails'
 gem 'turbolinks'

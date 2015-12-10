@@ -5,7 +5,6 @@ class VendorsController < ApplicationController
   def index
     # @user = current_user
     @vendors = Vendor.order('updated_at desc')
-    # @vendor = Vendor.find(params[:id])
   end
 
   def show
@@ -79,6 +78,6 @@ class VendorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_params
-      params.require(:vendor).permit(:name, :description, :url, :approved)
+      params.require(:vendor).permit(:name, :description, :url, :approved, :latitude, :longitude, :address)
     end
 end
