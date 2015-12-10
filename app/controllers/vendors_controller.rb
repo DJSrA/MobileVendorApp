@@ -44,6 +44,7 @@ class VendorsController < ApplicationController
         format.html { redirect_to vendors_path, notice: 'vendor was successfully updated.' }
         format.json { render :show, status: :ok, location: @vendor }
       else
+        puts "You failed"
         format.html { render :edit }
         format.json { render json: @vendor.errors, status: :unprocessable_entity }
       end
@@ -78,6 +79,6 @@ class VendorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_params
-      params.require(:vendor).permit(:name, :description, :url)
+      params.require(:vendor).permit(:name, :description, :url, :approved)
     end
 end

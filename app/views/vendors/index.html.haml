@@ -2,7 +2,11 @@
 %div.centeredimagezindex5
   %div.headergraphic
 %div.headerblue
-
+-if current_user
+  Logged in as 
+  = current_user.email
+  = link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
 %div.centeredtruckentries
-  = render partial: "vendor", collection: @vendors
+= link_to 'Log out', destroy_user_session_path, method: :delete
+= render partial: "vendor", collection: @vendors
 %button.btn.btn-default.create-button= link_to "+ New Vendor", new_vendor_path
