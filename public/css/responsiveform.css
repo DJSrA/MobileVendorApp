@@ -1,0 +1,304 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+* {
+/* With these codes padding and border does not increase it's width and gives intuitive style.*/
+
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+hr { 
+display: block;
+width: 100%
+height: 1px;
+border: 0; 
+border-top: 1px solid #6f6f6f; 
+padding: 0;
+width:100%
+}
+
+
+.signuplabel {
+font-size: 2em;
+cursor: pointer;
+display: block;
+font-weight: normal;
+line-height: .95;
+margin-bottom: 2px;
+margin-top: 10px;
+font-family: 'Walter Turncoat', cursive;
+font-size: 1.5em; 
+color: #bbbdbf;
+}
+
+
+.verticaldivider {
+background-image: url(../img/verticaldivider.svg);
+background-repeat: no-repeat;
+background-position: center center;
+height: 100%;
+width: 5px;
+}
+
+.verticaldivider_container {
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+height: 225px;
+}
+
+body {
+margin:0;
+padding:0;
+font-family: 'Roboto Slab', serif;
+}
+
+div#envelope{
+width: 79%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+form{
+width:100%;
+margin-left: auto;
+margin-right: auto;
+}
+
+header{
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+h2 {
+font-family: 'Walter Turncoat', cursive;
+font-size: 4rem;
+color: #bbbdbf;
+max-width: 140%;
+line-height: 80%;
+margin: 0px 0px 20px 0px;
+line-height: 110%;
+}
+
+p {
+color: #bbbdbf;
+font-family: georgia;
+font-style: italic;
+font-size: 2rem;
+display: block;
+letter-spacing: 1.5px;
+max-width: 98%;
+}
+
+label {
+color: #bbbdbf;
+font-family: georgia;
+font-style: italic;
+font-size: 1.5rem;
+display: block;
+letter-spacing: 1.5px;
+max-width: 98%;
+text-align: left;
+}
+
+input {
+background-color: #34383d;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #6f6f6f;
+    font-family: georgia;
+	font-style: italic;
+	font-size: 1rem;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #6f6f6f;
+   opacity:  1;
+   font-family: georgia;
+	font-style: italic;
+	font-size: 1rem;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #6f6f6f;
+   opacity:  1;
+   font-family: georgia;
+	font-style: italic;
+	font-size: 1rem;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: #6f6f6f;
+   font-family: georgia;
+	font-style: italic;
+	font-size: 1rem;
+}
+
+input, select, textarea{
+    font-family: georgia;
+	font-style: italic;
+	font-size: 1rem;
+	color: #D36318;
+}
+
+/* Makes responsive fields. Sets size and field alignment.*/
+input[type=text]{
+margin-bottom: 20px;
+margin-top: 5px;
+width:100%;
+padding: 25px;
+border: 2px solid #D36318;
+}
+
+input[type=submit]
+{
+margin-bottom: 20px;
+margin-top: 4rem;
+width:75%;
+padding: 25px;
+border-radius:5px;
+background-color: #D36318;
+color: #4d4d4d;
+font-size: 1.25rem;
+font-family: georgia;
+font-style: italic;
+border-width: 0px;
+text-align: center;
+}
+
+
+#submit:hover
+{
+background-color: #bbbdbf;
+}
+
+textarea{
+width:100%;
+padding: 15px;
+margin-top: 10px;
+border-radius:5px;
+margin-bottom: 20px;
+height: 50px;
+resize:none;
+}
+
+input[type=text]:focus,textarea:focus {
+border-color: #bbbdbf;
+}
+
+.submitpadding {
+width: 100%;
+height: 4rem;
+}
+
+.headerpadding {
+width: 100%;
+height: 2rem;
+}
+
+.headerpadding2 {
+width: 100%;
+height: .75rem;
+}
+
+
+/* max 1200px min 601px */
+@media all and (max-width:1200px) and (min-width:601px) {
+
+input[type=text]{
+border: 1px solid #D36318;
+margin-bottom: 20px;
+margin-top: 5px;
+width:100%;
+padding: 15px;
+}
+
+
+div#envelope{
+width: 80%;
+margin: 10px 30% 10px 11%;
+}
+
+h2 {
+font-size: 1.75em;
+margin: 40px 0px 10px 0px;
+}
+
+p {
+font-size: .75rem;
+line-height: 80%;
+}
+
+input[type=submit]
+{
+margin-top: 1.5rem;
+}
+
+input[type=text]{
+padding: 35px;
+margin-bottom: 20px;
+}
+
+}
+
+/* max 600px min 351px */
+@media all and (max-width:600px) and (min-width:351px) {
+h2 {
+font-size: 1.75em;
+margin: 40px 0px 10px 0px;
+}
+
+p {
+font-size: .75rem;
+}
+
+label{
+font-size:12px;
+}
+input[type=submit]{
+padding:5px;
+}
+input[type=text]{
+padding: 15px;
+margin-bottom: 20px;
+margin-top: 5px;
+width:100%;
+border: 1px solid #D36318;
+}
+div#envelope{
+margin: 10px 30% 10px 11%;
+}
+input[type=submit]
+{
+margin-top: 1.5rem;
+}
+}
+
+
+/* max 350px */
+@media all and (max-width:350px) {
+input[type=submit]
+{
+padding:4px;
+font-size:12px;
+margin-top: 2rem;
+}
+input[type=text]{
+padding: 8px;
+}
+label{
+font-size:12px;
+}
+h2{
+font-size:15px;
+}
+p{
+font-size:12px;
+}
+div#envelope{
+margin: 10px 30% 10px 11%;
+}
+}
