@@ -1,0 +1,47 @@
+<div class="truckentry">
+    <div class="truckentry_toptriangle">
+    </div>
+    <div class="truckentry_bottomtriangle">
+    </div>
+    <div class="truckentry_sectionforselect">
+        <h2 class="truckentry_goarrow">
+        <a href="https://maps.google.com?saddr=Current+Location=#{testVendor.latitude},#{testVendor.longitude}", target='_blank'>Go</a>
+        </h2>
+    </div>
+    <div class="truckentry_sectionforname">
+        <% if testVendor.user_id == current_user.id || current_user.admin %>
+            <button class="btn btn-default create-button">
+              <%= link_to "+ Edit Vendor", edit_vendor_path(id: testVendor.id)%>
+            </button>
+        <% end %>
+        <%if current_user.admin%>
+            <% if testVendor.approved != true %>
+              <button class="unapproved btn"> 
+                <%= link_to("Pending Approval", vendor_path(testVendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'}) %>
+              </button>
+            <% elsif testVendor.approved != false %>
+              <button class="unapproved btn">
+                <%= link_to("Approved", vendor_path(testVendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})%>
+              </button>
+            <% end %>
+        <% end %>
+        <h1 class="truckentry_truckname">
+            <%= testVendor.name %>
+        </h1>
+        <h2 class="truckentry_timeopen">
+            <%= testVendor.try(:open_time).try(:strftime, "%l%p")%>
+            -
+            <%= testVendor.try(:close_time).try(:strftime, "%l%p")%>
+        </h2>
+        <h2 class="truckentry_distance">
+            <% if testVendor.geocoded?                   %>
+              <%= testVendor.distance_from([request.location.latitude, request.location.longitude]).round(2) %>
+            <% end %>
+            MILES
+        </h2>
+    </div>
+    <div class="truckentry_slideoutmenuicon">
+    </div>
+</div>
+
+

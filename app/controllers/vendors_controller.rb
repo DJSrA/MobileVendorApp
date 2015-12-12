@@ -5,8 +5,8 @@ class VendorsController < ApplicationController
   def index
     # @user = current_user
     date = DateTime.now
-    @vendors = Vendor.order('updated_at desc')
-    # @vendors = Vendor.where("date_open != ?", Date.current)
+    @testVendors = Vendor.order('updated_at desc')
+    @vendors = Vendor.where("date_open != ?", Date.current)
     # @openVendors = Vendor.where(date_open: Date.today)
     @openVendors = Vendor.where("date_open == ?", Date.current )
   end
@@ -30,7 +30,6 @@ class VendorsController < ApplicationController
     puts "vendor #{@vendor.inspect}"
     respond_to do |format|
       if @vendor.save
-        # current_user.vendors << @vendor
         format.html { redirect_to vendors_path, notice: 'vendor was successfully created.' }
         # format.json { render :show, status: :created, location: @vendor }
       else
