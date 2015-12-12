@@ -1,0 +1,51 @@
+-if openVendor.approved != false
+  %div.truckentry.vendor-open
+    %div.truckname.container
+      %div
+        = link_to openVendor.name, controller: "vendors", action: "show", id: openVendor
+        %div.truckdescription
+          =openVendor.description
+          %br
+          %a{:href => openVendor.url, :target => "_blank"}= openVendor.url
+          -if openVendor.user_id == current_user.id || current_user.admin
+            %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: openVendor.id)
+          -if current_user.admin
+            - if openVendor.approved != true
+              %button.unapproved.btn 
+                = link_to("Pending Approval", vendor_path(openVendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
+            -elsif openVendor.approved != false
+              %button.unapproved.btn
+                = link_to("Approved", vendor_path(openVendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
+          %h4
+            OPEN:
+            = openVendor.try(:open_time).try(:strftime, "%l%p")
+            \-
+            = openVendor.try(:close_time).try(:strftime, "%l%p")
+
+    %a.distancecontainer{href: "https://maps.google.com?saddr=Current+Location=#{openVendor.latitude},#{openVendor.longitude}", target: '_blank'}
+      %div.numericdistance
+      - if openVendor.geocoded?                  
+        = openVendor.distance_from([request.location.latitude, request.location.longitude]).round(2)
+      %br
+      %div.distanceunit
+        mi
+-elsif current_user.admin == true
+  %div.truckentry.vendor-open
+    %div.truckname.container
+      %div
+        =openVendor.name
+        %div.truckdescription
+          =openVendor.description
+          %br
+          %a{:href => openVendor.url, :target => "_blank"}=openVendor.url
+          %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: openVendor.id)
+          - if openVendor.approved != true
+            %button.unapproved.btn 
+              = link_to("Pending Approval", vendor_path(openVendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
+    %a.distancecontainer
+      %div.numericdistance
+        %span
+          0
+      %br
+      %div.distanceunit
+        mi

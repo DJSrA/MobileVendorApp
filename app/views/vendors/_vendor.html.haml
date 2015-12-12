@@ -1,5 +1,5 @@
 -if vendor.approved != false
-  %div.truckentry
+  %div.truckentry.vendor-closed
     %div.truckname.container
       %div
         = link_to vendor.name, controller: "vendors", action: "show", id: vendor
@@ -16,6 +16,8 @@
             -elsif vendor.approved != false
               %button.unapproved.btn
                 = link_to("Approved", vendor_path(vendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
+          %h4
+            CLOSED
     %a.distancecontainer{href: "https://maps.google.com?saddr=Current+Location=#{vendor.latitude},#{vendor.longitude}", target: '_blank'}
       %div.numericdistance
       - if vendor.geocoded?                  
@@ -23,23 +25,31 @@
       %br
       %div.distanceunit
         mi
+
 -elsif current_user.admin == true
-  %div.truckentry
-    %div.truckname.container
-      %div
-        =vendor.name
-        %div.truckdescription
-          =vendor.description
-          %br
-          %a{:href => vendor.url, :target => "_blank"}=vendor.url
+%div.truckentry.vendor-closed
+  %div.truckname.container
+    %div
+      = link_to vendor.name, controller: "vendors", action: "show", id: vendor
+      %div.truckdescription
+        =vendor.description
+        %br
+        %a{:href => vendor.url, :target => "_blank"}=vendor.url
+        -if vendor.user_id == current_user.id || current_user.admin
           %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
+        -if current_user.admin
           - if vendor.approved != true
             %button.unapproved.btn 
               = link_to("Pending Approval", vendor_path(vendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
-    %a.distancecontainer
-      %div.numericdistance
-        %span
-          \.75
-      %br
-      %div.distanceunit
-        mi
+          -elsif vendor.approved != false
+            %button.unapproved.btn
+              = link_to("Approved", vendor_path(vendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
+        %h4
+          CLOSED
+  %a.distancecontainer{href: "https://maps.google.com?saddr=Current+Location=#{vendor.latitude},#{vendor.longitude}", target: '_blank'}
+    %div.numericdistance
+    - if vendor.geocoded?                  
+      = vendor.distance_from([request.location.latitude, request.location.longitude]).round(2)
+    %br
+    %div.distanceunit
+      mi

@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery.timepicker.js
+//= require vendors
+
+$(function(){
+  $('.vendor_opened_on').datepicker();
+  $('.vendor_opened_on_time').timepicker();
+})

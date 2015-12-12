@@ -4,7 +4,10 @@ class VendorsController < ApplicationController
 
   def index
     # @user = current_user
-    @vendors = Vendor.order('updated_at desc')
+    date = DateTime.now
+    @vendors = Vendor.where("date_open != ?", Date.current)
+    # @openVendors = Vendor.where(date_open: Date.today)
+    @openVendors = Vendor.where("date_open == ?", Date.current )
   end
 
   def show
@@ -50,18 +53,6 @@ class VendorsController < ApplicationController
     end
   end
 
-  # def update
-  #   respond_to do |format|
-  #     if @news_item.update(news_item_params)
-  #       format.html { redirect_to @news_item, notice: 'news_item was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @news_item }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @news_item.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
   def destroy
     @vendor.destroy
     respond_to do |format|
@@ -78,6 +69,6 @@ class VendorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_params
-      params.require(:vendor).permit(:name, :description, :url, :approved, :latitude, :longitude, :address)
+      params.require(:vendor).permit(:name, :description, :url, :approved, :latitude, :longitude, :address, :open_time, :close_time, :date_open)
     end
 end
