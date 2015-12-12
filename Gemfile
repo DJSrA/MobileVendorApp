@@ -11,6 +11,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'geocoder'
 gem 'jquery-timepicker-rails'
+gem 'tzinfo-data'
+gem 'coffee-script-source', '1.8.0'
 
 gem 'jquery-rails'
 gem 'turbolinks'

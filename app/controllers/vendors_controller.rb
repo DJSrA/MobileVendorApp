@@ -5,7 +5,8 @@ class VendorsController < ApplicationController
   def index
     # @user = current_user
     date = DateTime.now
-    @vendors = Vendor.where("date_open != ?", Date.current)
+    @vendors = Vendor.order('updated_at desc')
+    # @vendors = Vendor.where("date_open != ?", Date.current)
     # @openVendors = Vendor.where(date_open: Date.today)
     @openVendors = Vendor.where("date_open == ?", Date.current )
   end
