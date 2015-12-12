@@ -21,11 +21,13 @@
 */
 
  @import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+ @import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700);
 
  body {
    margin: 0;
-   background-color: #3C4049;
-   color: #FFFFFF;
+   /*background-color: #3C4049;*/
+   /*color: #FFFFFF;*/
  }
 
  ul, ol, li {
@@ -34,11 +36,11 @@
 
  * {
    text-shadow: none;
-   font-family: Lato, Helvetica, Arial;
+   /*font-family: Lato, Helvetica, Arial;*/
  }
 
  p {
-  font-size: 15px;
+  /*font-size: 15px;*/
  }
 
  a {
