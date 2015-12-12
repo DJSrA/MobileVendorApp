@@ -3,12 +3,15 @@ class VendorsController < ApplicationController
   before_action :set_vendor, only: [:show, :edit, :update, :destroy]
 
   def index
-    # @user = current_user
     date = DateTime.now
-    @testVendors = Vendor.order('updated_at desc')
-    @vendors = Vendor.where("date_open != ?", Date.current)
-    # @openVendors = Vendor.where(date_open: Date.today)
-    @openVendors = Vendor.where("date_open == ?", Date.current )
+    if params[:search]
+      @testVendors = Vendor.search(params[:search]).order("created_at DESC")
+    else
+      @testVendors = Vendor.order("created_at DESC")
+    end
+    # @testVendors = Vendor.order('updated_at desc')
+    # @vendors = Vendor.where("date_open != ?", Date.current)
+    # @openVendors = Vendor.where("date_open == ?", Date.current )
   end
 
   def show
