@@ -1,3 +1,7 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).on 'ready page:load', ->
+  $ ->
+    $('.vendor_opened_on').datepicker({
+      dateFormat: 'yy-mm-dd'
+    })
+    $('.vendor_opened_on_time').timepicker()
+    return

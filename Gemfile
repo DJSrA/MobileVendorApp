@@ -10,6 +10,7 @@ gem 'haml'
 gem 'simple_form'
 gem 'devise'
 gem 'geocoder'
+gem 'jquery-timepicker-rails'
 
 gem 'jquery-rails'
 gem 'turbolinks'

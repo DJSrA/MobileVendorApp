@@ -5,10 +5,19 @@
 /*@media all and (max-width: 1000px) {*/
 
 html {
-  max-width: 1000px;
+  width: 100%;
+  // max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
+
+.vendor-closed {
+  background-color: #2A2C30;
+}
+
+// .vendor-open {
+//   background-color: #ECBC54;
+// }
 
 .headerblue {
   width: 100%;
@@ -86,13 +95,12 @@ html {
 .headergraphic {
   background-image: url(FoodTruckHeaderGraphic.svg);
   background-repeat: no-repeat;
-  // background-position: center center;
-  width: 78%;
-  // width: 800px;
-  margin: 0 auto;
-  height: 240px;
-  -webkit-filter: drop-shadow(5px 8px 1px rgba(30,30,30,0.75));
-  filter: drop-shadow(5px 8px 1px rgba(30,30,30,0.75));
+  width: 26%;
+  background-size: 100%;
+  margin: 30px auto;
+  height: 130px;
+  -webkit-filter: drop-shadow(5px 8px 1px rgba(30, 30, 30, 0.75));
+  filter: drop-shadow(5px 8px 1px rgba(30, 30, 30, 0.75));
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -142,7 +150,7 @@ img.header {
   
 .truckentry {
   width:100%;
-  max-width: 1050px;
+  // max-width: 1050px;
   min-width: 600px;
   // height: 225px;
   padding: 30px 0;
