@@ -1,10 +1,10 @@
-%header
-%div.centeredimagezindex5
-  %div.headergraphic
-%div.headerblue
-  = link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
-%div.centeredtruckentries
-  = render partial: "testVendor", collection: @testVendors
-  = link_to 'Log out', destroy_user_session_path, method: :delete
+/ %header
+/ %div.centeredimagezindex5
+/ %div.headergraphic
+/ %div.headerblue
+/   = link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
+/ %div.centeredtruckentries
+= render partial: "test_vendor", collection: @testVendors
+/   = link_to 'Log out', destroy_user_session_path, method: :delete
 
-%button.btn.btn-default.create-button= link_to "+ New Vendor", new_vendor_path
+/ %button.btn.btn-default.create-button= link_to "+ New Vendor", new_vendor_path
