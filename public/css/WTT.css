@@ -1,500 +1,164 @@
+/* // NORMALIZE // */
 
-/* HEADER */
+.html {
+}
 
-.headerblue {
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    background-color: #383838;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.body_container {
 	width: 100%;
-	position: fixed;
-	height: 105px;
-	background-color: #96B2B0;
-	top: 0px;
-	right: 0;
-   	left: 0;
-   	margin-right: auto;
-   	margin-left: auto;
-	z-index: 3;
-	-webkit-filter: drop-shadow(0px 7px 1px rgba(30,30,30,0.75));
-    	filter: drop-shadow(0px 7px 1px rgba(30,30,30,0.75));
-    	-webkit-transition: all 0.3s;
-    	-moz-transition: all 0.3s;
-    	-ms-transition: all 0.3s;
-    	-o-transition: all 0.3s;
-    	transition: all 0.3s;
-	}
+	max-width: 600px;
+	min-width:320px;
+	height: auto;
+	margin: 0 auto 0 auto;
+}
 
-.headergraphic
-	{
-	text-align: center;
-	position: fixed;
-	top: -.5rem;
-	left: -.15rem;
-	z-index: 5;
-	background-image: url(../img/FoodTruckHeaderGraphic.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: contain;
+.truck_container {
 	width: 100%;
-    	margin: 0 auto;
-	height: 300px;
-	max-height: 300px;
-	-webkit-filter: drop-shadow(5px 10px 1px rgba(30,30,30,0.75));
-    	filter: drop-shadow(5px 10px 1px rgba(30,30,30,0.75));
-    	-webkit-transition: all 0.3s;
-    	-moz-transition: all 0.3s;
-    	-ms-transition: all 0.3s;
-    	-o-transition: all 0.3s;
-    	transition: all 0.3s;
-	}
-
-.topofpagespacer 
-	{
-	height: 325px;
+	height: 150px;
+	background-color: #D15127;
+	padding: 7px;
+	margin: 7px 0 0 0;
 	position: relative;
-	top: 2px;
-	right: 0;
-    	left: 5px;
-    	margin-right: auto;
-    	margin-left: auto;
-	}
-
-/* BODY */
-
-a:link {
-    	text-decoration: none;
 }
 
-a:visited {
-    	text-decoration: none;
+.truck_distance_container {
+	width: 50px;
+	height: 50px;
+	border: 7px solid #D2D2D2;
+	position: absolute;
+	top: 14px;
+	left: 14px;
 }
 
-a:hover {
-    	text-decoration: none;
-}
-
-a:active {
-    	text-decoration: none;
-}
-
-
-.centeredtruckentries {
-	width: 100%;
-	max-width: 1100px;
-	min-width:700px;
-	margin-left: auto;
-	margin-right: auto;
-	}
-
-.stateofthetrucktext {
-	font-family: georgia;
-	font-style: italic;
+.truck_name {
+	width: auto;
+	height: auto;
+	font-family: 'Oswald', sans-serif;
 	font-size: 2rem;
-	display: block;
-	letter-spacing: 1.5px;
-	max-width: 98%;
-	color: #bbbdbf;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 1rem;
-	margin-top: 1rem;
-	}
-	
-.horizontalborderstop
-	{
-	text-align:center;
-	width: 100%;
-	height: 5px;
-	margin-left: auto;
-	margin-right; auto;
-	margin-bottom: 5px;
-    	display: block;
-    	background-image: url(../img/solidborder.svg);
-    	background-repeat: no-repeat;
-    	background-position: center center;
-    	background-size: cover;
-	}
-	
-.horizontalbordersbottom
-	{
-	text-align:center;
-	width: 100%;
-	height: 5px;
-	margin-left: auto;
-	margin-right; auto;
-	margin-top: 5px;
-    	display: block;
-    	background-image: url(../img/solidborder.svg);
-    	background-repeat: no-repeat;
-    	background-position: center center;
-    	background-size: cover;
-	}
-
-.truckentry
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	height: 225px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	overflow: hidden;
-	position: relative;
-	}
-
-a.menubuttoncontainer
-	{
-	height: 225px;
-	width: 8%;
-	display: inline-block;
-	background-image: url(../img/truckoption1.svg);
-  	background-repeat: no-repeat;
-  	background-position: center center;
-	}
-.menubuttoncontainer
-	{
-	height: 225px;
-	width: 6%;
-	display: inline-block;
-	}
-	
-.menubutton
-	{
-    	text-align:center;
-    	}
-
-a:active {
-	background-color: #D36318;
-	}
-
-.trucknamecontainer
-	{
-	height: 225px;
-	width: 67%;
-	display: inline-block;
-	position: relative;
-	bottom: 1rem;
-	}
-	
-.truckname
-	{
-	font-family: 'Walter Turncoat', cursive;
-	font-size: 5em;
 	text-align: right;
-	color: #bbbdbf;
-	max-height: 60px;
-	max-width: 98%;
-	right: 5px;
-	line-height: 80%;
-	display: block;
+	color: #D2D2D2;
+	line-height: 110%;
 	position: relative;
-	bottom: 1.25rem;
-	}
-	
-.truckdescription
-	{
-	font-family: georgia;
-	font-style: italic;
-	font-size: 2rem;
+	margin-top: 7px;
 	display: block;
-	letter-spacing: 1.5px;
-	max-width: 98%;
-	color: #bbbdbf;
-	}
-	
-.verticaldivider_container {
-	width: 5px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 225px;
-	display: inline-block;
 }
 
-.verticaldivider {
-	background-image: url(../img/verticaldivider.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	height: 100%;
-	display: inline-block;
-	width: 5px;
-}
-
-a.distancecontainer
-	{
-	height: 225px;
-	width: 22%;
-	background-image: url(../img/distanceicon.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	display: inline-block;
-	vertical-align: top;
-	text-align: center;
-	}
-	
-.numericdistance
-	{
-	position: relative;
-	display: inline-block;
-	font-family: georgia;
+.truck_description {
+	width: auto;
+	height: auto;
+	font-family: 'Georgia', serif;
+	font-size: 1rem;
 	font-style: italic;
-	font-size: 4rem;
-	line-height: 200%;
-	font-weight: 200;
-	color: #D36318;
-	top: 30px;
-	letter-spacing: -5px;
-	}
-	
-.distanceunit
-	{
-	position: relative;
-	display: inline-block;
-	font-family: georgia;
-	font-style: italic;
-	font-size: 2rem;
-	line-height: 200%;
-	font-weight: 200;
-	color: #D36318;
-	top: -10px;
-	}
-
-#extramenubar1
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	text-align: center;
-	}		
-
-.extramenubarbuttons
-	{
-	display: inline-block;
-	width: 300px;
-	text-align: center;
-	position: relative;
-	bottom: 25%;
-	}
-	
-.extramenubartext
-	{
-	font-family: georgia;
-	font-style: italic;
-	font-size: 2.75rem;
-	color: #D36318;
-	letter-spacing: 2px;
-	text-align: center;
-	}
-	
-.extramenubardivider
-	{
-	width: 3px;
-	border-left: 2px solid #D36318;
-	height: 100%;
-	text-align:center;
-	margin-left: auto;
-	margin-right; auto;
-	display: inline-block;
-	position: relative;
-	top: 5%;
-	}
-
-.truckdescription_closed
-	{
-	font-family: georgia;
-	font-style: italic;
-	font-size: 2rem;
-	display: block;
-	letter-spacing: 1.5px;
-	max-width: 98%;
-	color: #6c6c6e;
-	}
-	
-.truckname_closed
-	{
-	font-family: 'Walter Turncoat', cursive;
-	font-size: 5em;
 	text-align: right;
-	color: #6c6c6e;
-	max-height: 60px;
-	max-width: 98%;
-	right: 5px;
-	line-height: 80%;
+	color: #D2D2D2;
+	position: relative;
 	display: block;
-	position: relative;
-	bottom: 10%;
-	}
+}
 
-.distancecontainer_closed
-	{
-	height: 225px;
-	width: 22%;
-	display: inline-block;
-	vertical-align: top;
+.truck_openclose_container {
+	width: 25%;
+	height: 65px;
+	background-color: #383838;
+	margin: 10px auto 0 auto;
+	float: left;
+	bottom: 7px;
+	left: 7px;
 	text-align: center;
-	}
+	/*display: flex;
+  	align-items: center*/
+}
 
-.numericdistance_closed
-	{
-	position: relative;
-	display: inline-block;
-	font-family: georgia;
-	font-style: italic;
-	font-size: 6rem;
-	line-height: 200%;
-	font-weight: 200;
-	color: #6c6c6e;
-	letter-spacing: -4px;
-	top: -20px;
-	}
-	
-.distanceunit_closed
-	{
-	position: relative;
-	display: inline-block;
-	font-family: georgia;
-	font-style: italic;
+.truck_openclose_text {
+	font-family: 'Oswald', sans-serif;
 	font-size: 2rem;
-	line-height: 90%;
-	font-weight: 200;
-	color: #6c6c6e;
-	top: -60px;
-	}
-	
+	color: #D2D2D2;
+	margin-bottom: 7px;
+	line-height: 110%;
+	position: relative;
+	top: 7px;
+	display: block;
+}
 
-/* ERRATA */
-img.header 
-	{ 
-	max-width: 900px;
-	min-width: 500px;
-	}
+.truck_tilltime_text {
+	font-family: 'Georgia', sans-serif;
+	font-size: 1rem;
+	font-style: italic;
+	color: #D2D2D2;
+	line-height: 110%;
+	position: relative;
+	display: block;
+}
 
-#extramenubar2
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
+.truck_buttons_container {
+	width: 75%;
 	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	text-align: center;
-	}
+	background-color: #383838;
+	border-left: 7px solid #D15127;
+	margin-top: 10px;
+	padding: 4px;
+	float: left;
+	bottom: 7px;
+	right: 7px;
+}
 
-#extramenubar3
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
+.truck_mapbutton_container {
+	width: 100%;
+	height: 26px;
+	border: 2px solid #D2D2D2;
+	float: left;
+	margin: 4px 0 0 0;
 	text-align: center;
-	}
+	padding-top: 3px;
+}
 
-#extramenubar4
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
+.truck_menubutton_container {
+	width: 49%;
+	height: 26px;
+	border: 2px solid #D2D2D2;
+	float: left;
 	text-align: center;
-	}
+	position: relative;
+	padding-top: 5px;
+}
 
-#extramenubar5
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
+.truck_callbutton_container {
+	width: 49%;
+	height: 26px;
+	border: 2px solid #D2D2D2;
+	float: right;
 	text-align: center;
-	}
+	position: relative;
+	padding-top: 5px;
+}
 
-#extramenubar6
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	text-align: center;
-	}
+.truck_menucallbutton_text {
+	font-family: 'Georgia', sans-serif;
+	font-size: .75rem;
+	font-style: italic;
+	color: #D2D2D2;
+	line-height: 110%;
+	position: relative;
+}
 
-#extramenubar7
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	text-align: center;
-	}
-
-#extramenubar8
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	text-align: center;
-	}
-
-#extramenubar9
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	text-align: center;
-	}
-
-#extramenubar10
-	{
-	width:100%;
-	max-width: 1050px;
-	min-width: 600px;
-	min-height: 65px;
-	height: 65px;
-	max-height: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	text-align: center;
-	}
+.truck_mapbutton_text {
+	font-family: 'Georgia', sans-serif;
+	font-size: 1rem;
+	font-style: italic;
+	color: #D2D2D2;
+	line-height: 110%;
+	position: relative;
+}
