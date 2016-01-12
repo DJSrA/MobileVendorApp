@@ -166,437 +166,671 @@ html {
 }
 
 
-.topofpagespacer {
-  height: 250px;
-  position: relative;
-  top: 2px;
-  right: 0;
-  left: 5px;
-  margin-right: auto;
-  margin-left: auto;
-}
+// .topofpagespacer {
+//   height: 250px;
+//   position: relative;
+//   top: 2px;
+//   right: 0;
+//   left: 5px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 
-.horizontalborders {
-  text-align:center;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
+// .horizontalborders {
+//   text-align:center;
+//   width: 100%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: block;
+// }
 
-img.header { 
-  max-width: 900px;
-  min-width: 500px;
-}
+// img.header { 
+//   max-width: 900px;
+//   min-width: 500px;
+// }
   
-.truckentry {
-  width:100%;
-  // max-width: 1050px;
-  min-width: 600px;
-  // height: 225px;
-  padding: 30px 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  overflow: hidden;
-  position: relative;
-}
+// .truckentry {
+//   width:100%;
+//   // max-width: 1050px;
+//   min-width: 600px;
+//   // height: 225px;
+//   padding: 30px 0;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: block;
+//   overflow: hidden;
+//   position: relative;
+// }
   
-.verticaldivider {
-  height: 60px;
-  display: inline-block;
-  width: 3px;
-  border-left: 2px solid #7B7C7A;
-  margin-left: auto;
-  margin-right: auto;
-}
+// .verticaldivider {
+//   height: 60px;
+//   display: inline-block;
+//   width: 3px;
+//   border-left: 2px solid #7B7C7A;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
 
-a.menubuttoncontainer {
-  height: 225px;
-  width: 8%;
-  display: inline-block;
-  background-image: url(truckoption1.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+// a.menubuttoncontainer {
+//   height: 225px;
+//   width: 8%;
+//   display: inline-block;
+//   background-image: url(truckoption1.svg);
+//     background-repeat: no-repeat;
+//     background-position: center center;
+// }
 
-.menubuttoncontainer {
-  height: 225px;
-  width: 8%;
-  display: inline-block;
-}
+// .menubuttoncontainer {
+//   height: 225px;
+//   width: 8%;
+//   display: inline-block;
+// }
   
-.menubutton {
-  text-align:center;
-}
+// .menubutton {
+//   text-align:center;
+// }
 
-.trucknamecontainer {
-  // height: 225px;
-  padding: 30px;
-  width: 65%;
-  display: inline-block;
-}
+// .trucknamecontainer {
+//   // height: 225px;
+//   padding: 30px;
+//   width: 65%;
+//   display: inline-block;
+// }
 
-.truckname {
-  // font-family: 'Walter Turncoat', cursive;
-  font-size: 2em;
-  text-align: left;
-  color: #bbbdbf;
-  // max-height: 60px;
-  min-width: 60%;
-  border-right: 2px solid #7B7C7A;
-  right: 5px;
-  line-height: 80%;
-  display: inline-block;
+// .truckname {
+//   // font-family: 'Walter Turncoat', cursive;
+//   font-size: 2em;
+//   text-align: left;
+//   color: #bbbdbf;
+//   // max-height: 60px;
+//   min-width: 60%;
+//   border-right: 2px solid #7B7C7A;
+//   right: 5px;
+//   line-height: 80%;
+//   display: inline-block;
 
-  // position: relative;
-  // bottom: 10%;
-}
+//   // position: relative;
+//   // bottom: 10%;
+// }
   
-.truckdescription {
-  // font-family: georgia;
-  font-size: 1rem;
-  display: block;
-  letter-spacing: 1.5px;
-  max-width: 98%;
-}
+// .truckdescription {
+//   // font-family: georgia;
+//   font-size: 1rem;
+//   display: block;
+//   letter-spacing: 1.5px;
+//   max-width: 98%;
+// }
   
-.truckname_closed {
-  // font-family: 'Walter Turncoat', cursive;
-  font-size: 5em;
-  text-align: left;
-  color: #6c6c6e;
-  max-height: 60px;
-  max-width: 98%;
-  right: 5px;
-  line-height: 80%;
-  display: block;
-  position: relative;
-  bottom: 10%;
-}
+// .truckname_closed {
+//   // font-family: 'Walter Turncoat', cursive;
+//   font-size: 5em;
+//   text-align: left;
+//   color: #6c6c6e;
+//   max-height: 60px;
+//   max-width: 98%;
+//   right: 5px;
+//   line-height: 80%;
+//   display: block;
+//   position: relative;
+//   bottom: 10%;
+// }
 
-a.distancecontainer {
-  width: 22%;
-  color: #D36318;
-  background-image: url(distanceicon.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  display: inline-block;
-  padding: 30px;
-  background-size: 30%;
-  vertical-align: top;
-  text-align: center;
-}
+// a.distancecontainer {
+//   width: 22%;
+//   color: #D36318;
+//   background-image: url(distanceicon.svg);
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   display: inline-block;
+//   padding: 30px;
+//   background-size: 30%;
+//   vertical-align: top;
+//   text-align: center;
+// }
   
-.distancecontainer_closed {
-  height: 225px;
-  width: 22%;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-}
+// .distancecontainer_closed {
+//   height: 225px;
+//   width: 22%;
+//   display: inline-block;
+//   vertical-align: top;
+//   text-align: center;
+// }
   
-.numericdistance {
-  // position: relative;
-  display: inline-block;
-  // font-family: georgia;
-  font-size: 2rem;
-  line-height: 100%;
-  font-weight: 200;
-  color: #D36318;
-  // top: 20px;
-  // letter-spacing: -4px;
-}
+// .numericdistance {
+//   // position: relative;
+//   display: inline-block;
+//   // font-family: georgia;
+//   font-size: 2rem;
+//   line-height: 100%;
+//   font-weight: 200;
+//   color: #D36318;
+//   // top: 20px;
+//   // letter-spacing: -4px;
+// }
   
-.numericdistance_closed {
-  // position: relative;
-  display: inline-block;
-  // font-family: georgia;
-  font-size: 2rem;
-  line-height: 200%;
-  font-weight: 200;
-  color: #6c6c6e;
-  // letter-spacing: -4px;
-  // top: -20px;
-}
+// .numericdistance_closed {
+//   // position: relative;
+//   display: inline-block;
+//   // font-family: georgia;
+//   font-size: 2rem;
+//   line-height: 200%;
+//   font-weight: 200;
+//   color: #6c6c6e;
+//   // letter-spacing: -4px;
+//   // top: -20px;
+// }
   
-.distanceunit {
-  position: relative;
-  display: inline-block;
-  // font-family: georgia;
-  font-size: 1rem;
-  line-height: 100%;
-  font-weight: 200;
-  color: #D36318;
-  // top: -30px;
-}
+// .distanceunit {
+//   position: relative;
+//   display: inline-block;
+//   // font-family: georgia;
+//   font-size: 1rem;
+//   line-height: 100%;
+//   font-weight: 200;
+//   color: #D36318;
+//   // top: -30px;
+// }
   
-.distanceunit_closed {
-  position: relative;
-  display: inline-block;
-  // font-family: georgia;
-  font-size: 1rem;
-  line-height: 90%;
-  font-weight: 200;
-  color: #6c6c6e;
-  top: -60px;
-}
+// .distanceunit_closed {
+//   position: relative;
+//   display: inline-block;
+//   // font-family: georgia;
+//   font-size: 1rem;
+//   line-height: 90%;
+//   font-weight: 200;
+//   color: #6c6c6e;
+//   top: -60px;
+// }
   
-.extramenubardivider {
-  width: 3px;
-  border-left: 2px solid #D36318;
-  height: 100%;
-  text-align:center;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-  position: relative;
-  top: 5%;
-}
+// .extramenubardivider {
+//   width: 3px;
+//   border-left: 2px solid #D36318;
+//   height: 100%;
+//   text-align:center;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: inline-block;
+//   position: relative;
+//   top: 5%;
+// }
   
-#extramenubar1 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar1 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
   
-#extramenubar2 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar2 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-#extramenubar3 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar3 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-#extramenubar4 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar4 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-#extramenubar5 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar5 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-#extramenubar6 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar6 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-#extramenubar7 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar7 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-#extramenubar8 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar8 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-#extramenubar9 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar9 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-#extramenubar10 {
-  width:100%;
-  max-width: 1050px;
-  min-width: 600px;
-  min-height: 65px;
-  height: 65px;
-  max-height: 65px;
-  margin-left: auto;
-  margin-right: auto;
-  display: none;
-  text-align: center;
-}
+// #extramenubar10 {
+//   width:100%;
+//   max-width: 1050px;
+//   min-width: 600px;
+//   min-height: 65px;
+//   height: 65px;
+//   max-height: 65px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   display: none;
+//   text-align: center;
+// }
 
-.extramenubarbuttons {
-  display: inline-block;
-  width: 300px;
-  text-align: center;
-  position: relative;
-  bottom: 25%;
-}
+// .extramenubarbuttons {
+//   display: inline-block;
+//   width: 300px;
+//   text-align: center;
+//   position: relative;
+//   bottom: 25%;
+// }
   
-.extramenubartext {
-  // font-family: georgia;
-  font-size: 2.75rem;
-  color: #D36318;
-  letter-spacing: 2px;
-  text-align: center;
-}
+// .extramenubartext {
+//   // font-family: georgia;
+//   font-size: 2.75rem;
+//   color: #D36318;
+//   letter-spacing: 2px;
+//   text-align: center;
+// }
 
 
 // NEW STYLES NEW STYLES!
 
-.vendor-container{
-  width: 90%;
-  height: 180px;
-  max-width: 423px;
-  background: #191A1D;
-  margin: 0 auto 20px;
-  .vendor-header {
-    box-sizing: border-box;
-    width: 100%;
-    height: 40%;
-    padding: 10px;
-    .vendor-distance {
-      height: 50px;
-      width: 16%;
-      vertical-align: top;
-      border: 3px solid #D2D2D2;
-      color: #D2D2D2;
-      float: left;
-      display: inline-block;
-      font-family: 'Nexa-light' !important;
-      .distance-number {
-        font-size: 23px;
-        letter-spacing: 1px;
-      }
-      .distance-miles {
+// .vendor-container{
+//   width: 90%;
+//   height: 180px;
+//   max-width: 423px;
+//   background: #191A1D;
+//   margin: 0 auto 20px;
+//   .vendor-header {
+//     box-sizing: border-box;
+//     width: 100%;
+//     height: 40%;
+//     padding: 10px;
+//     .vendor-distance {
+//       height: 50px;
+//       width: 16%;
+//       vertical-align: top;
+//       border: 3px solid #D2D2D2;
+//       color: #D2D2D2;
+//       float: left;
+//       display: inline-block;
+//       font-family: 'Nexa-light' !important;
+//       .distance-number {
+//         font-size: 23px;
+//         letter-spacing: 1px;
+//       }
+//       .distance-miles {
 
-      }
-    }
-    .vendor-name {
-      width: 78%;
-      float: right;
-      vertical-align: top;
-      height: 59px;
-      text-align: right;
-      color: #D2D2D2;
-      box-sizing: border-box;
-      line-height: 30px;
-      display: inline-block;
-      padding: 0 12px;
-      .vendor-name-text {
-        font-family: 'Nexa_bold';
-        font-size: 26px;
-        letter-spacing: 2px;
-      }
-      .vendor-description-text {
-        font-family: 'Nexa_light';
-      }
-    }
+//       }
+//     }
+//     .vendor-name {
+//       width: 78%;
+//       float: right;
+//       vertical-align: top;
+//       height: 59px;
+//       text-align: right;
+//       color: #D2D2D2;
+//       box-sizing: border-box;
+//       line-height: 30px;
+//       display: inline-block;
+//       padding: 0 12px;
+//       .vendor-name-text {
+//         font-family: 'Nexa_bold';
+//         font-size: 26px;
+//         letter-spacing: 2px;
+//       }
+//       .vendor-description-text {
+//         font-family: 'Nexa_light';
+//       }
+//     }
 
-  }
-  .vendor-left-content {
-    height: 56%;
-    box-sizing: border-box;
-    vertical-align: top;
-    display: inline-block;
-    width: 39%;
-    float: left;
-    padding: 0 0px 0px 10px;
-    .vendor-time {
-      background: #D2D2D2;
-      height: 100%;
-      width: 100%;
-      display: inline-block;
-      float: left;
-    }
-  }
-  .vendor-right-content {
-    height: 104px;
-    display: inline-block;
-    width: 59%;
-    .vendor-menu {
-      background: #D2D2D2;
-      height: 40%;
-      margin-right: 2px;
-      width: 47%;
-      display: inline-block;
-    }
-    .vendor-website {
-      vertical-align: top;
-      background: #D2D2D2;
-      height: 40%;
-      margin-right: 4px;
-      width: 46%;
-      display: inline-block;
-    }
-    .vendor-map {
-      height: 51%;
-      width: 96%;
-      box-sizing: border-box;
-      background: #D2D2D2;
-      margin-left: 2px;
-      margin-top: 3px;
-    }
+//   }
+//   .vendor-left-content {
+//     height: 56%;
+//     box-sizing: border-box;
+//     vertical-align: top;
+//     display: inline-block;
+//     width: 39%;
+//     float: left;
+//     padding: 0 0px 0px 10px;
+//     .vendor-time {
+//       background: #D2D2D2;
+//       height: 100%;
+//       width: 100%;
+//       display: inline-block;
+//       float: left;
+//     }
+//   }
+//   .vendor-right-content {
+//     height: 104px;
+//     display: inline-block;
+//     width: 59%;
+//     .vendor-menu {
+//       background: #D2D2D2;
+//       height: 40%;
+//       margin-right: 2px;
+//       width: 47%;
+//       display: inline-block;
+//     }
+//     .vendor-website {
+//       vertical-align: top;
+//       background: #D2D2D2;
+//       height: 40%;
+//       margin-right: 4px;
+//       width: 46%;
+//       display: inline-block;
+//     }
+//     .vendor-map {
+//       height: 51%;
+//       width: 96%;
+//       box-sizing: border-box;
+//       background: #D2D2D2;
+//       margin-left: 2px;
+//       margin-top: 3px;
+//     }
     
-  }
-  // CLOSED COLOR 
+//   }
+//   // CLOSED COLOR 
+// }
+
+.body_container {
+  width: 100%;
+  max-width: 600px;
+  min-width:320px;
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+
+.truck_open_maincontainer {
+  width: 100%;
+  max-width: 600px;
+  min-width:320px;
+  height: 150px;
+  background-color: #D15127;
+  padding: 7px;
+  margin: 7px auto 0 auto;
+  position: relative;
+}
+
+.truck_distance_container {
+  width: 22.1%;
+  height: 64px;
+  border: 7px solid #ECBC54;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  text-align: center;
+}
+
+.truck_distance_text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #ECBC54;
+  margin-bottom: 7px;
+  line-height: 110%;
+  position: relative;
+  display: inline-block;
+  top: 7px;
+}
+
+.truck_miles_text {
+  font-family: 'Georgia', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #ECBC54;
+  line-height: 110%;
+  position: relative;
+  display: inline-block;
+  right: 2px;
+}
+
+.truck_name_text {
+  width: auto;
+  height: auto;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  text-align: right;
+  color: #ECBC54;
+  line-height: 110%;
+  position: relative;
+  margin-top: 7px;
+  display: block;
+}
+
+.truck_description_text {
+  width: auto;
+  height: auto;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: right;
+  color: #ECBC54;
+  position: relative;
+  display: block;
+}
+
+.truck_opensign_container {
+  width: 25%;
+  height: 65px;
+  background-color: #31343D;
+  margin: 18px auto 0 auto;
+  float: left;
+  text-align: center;
+}
+
+.truck_opensign_text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #ECBC54;
+  margin-bottom: 7px;
+  line-height: 110%;
+  position: relative;
+  top: 7px;
+  display: block;
+}
+
+.truck_tilltime_text {
+  font-family: 'Georgia', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #ECBC54;
+  line-height: 110%;
+  position: relative;
+  display: block;
+}
+
+.truck_buttons_container {
+  width: 72%;
+  height: 65px;
+  background-color: #31343D;
+  border-left: 7px solid #D15127;
+  margin-top: 10px;
+  padding: 4px;
+  float: left;
+  bottom: 7px;
+  right: 7px;
+}
+
+a.truck_mapbutton_container {
+  width: 100%;
+  height: 26px;
+  outline: 2px solid #B0C0BC;
+  color: #B0C0BC;
+  float: left;
+  margin: 5px 0 0 0;
+  text-align: center;
+  padding-top: 3px;
+  text-decoration: none;
+}
+
+a.truck_mapbutton_container:active {
+  border: 2px solid #51a3a3;
+  background-color: #51a3a3;
+  color: #31343D;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+a.truck_menubutton_container {
+  width: 49.5%;
+  height: 26px;
+  outline: 2px solid #B0C0BC;
+  color: #B0C0BC;
+  float: left;
+  text-align: center;
+  position: relative;
+  padding-top: 5px;
+  text-decoration: none;
+}
+
+a.truck_menubutton_container:active {
+  outline: 2px solid #51a3a3;
+  background-color: #51a3a3;
+  color: #31343D;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+a.truck_callbutton_container {
+  width: 49.4%;
+  height: 26px;
+  outline: 2px solid #B0C0BC;
+  color: #B0C0BC;
+  float: right;
+  text-align: center;
+  position: relative;
+  padding-top: 5px;
+  text-decoration: none;
+}
+
+a.truck_callbutton_container:active {
+  outline: 2px solid #51a3a3;
+  background-color: #51a3a3;
+  color: #31343D;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.truck_menucallbutton_text {
+  font-family: 'Georgia', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 700;
+  color: inherit;
+  line-height: 75%;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.truck_mapbutton_text {
+  font-family: 'Georgia', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  color: inherit;
+  line-height: 100%;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* /// CLOSED /// */
+
+.truck_closed_maincontainer {
+  width: 100%;
+  max-width: 600px;
+  min-width:320px;
+  height: 90px;
+  border: 2px solid #B0C0BC;
+  padding: 7px;
+  margin: 7px auto 0 auto;
+  position: relative;
+}
+
+.truck_closedsign_container {
+  width: 25%;
+  height: 100%;
+  background-color: #31343D;
+  border-right: 2px solid #B0C0BC;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.truck_closedsign_text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  color: #ECBC54;
+  line-height: 110%;
+  position: relative;
+  padding: 15% 0 0 0;
 }

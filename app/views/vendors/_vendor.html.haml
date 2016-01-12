@@ -1,32 +1,59 @@
-/ -if vendor.approved != false
-/   %div.truckentry.vendor-closed
-/     %div.truckname.container
-/       %div
-/         = link_to vendor.name, controller: "vendors", action: "show", id: vendor
-/         %div.truckdescription
-/           =vendor.description
-/           %br
-/           %a{:href => vendor.url, :target => "_blank"}=vendor.url
-/           -if current_user == true && openVendor.user_id == current_user.id || current_user == true && current_user.admin
-/             %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
-/           -if current_user == true && current_user.admin
-/             - if vendor.approved != true
-/               %button.unapproved.btn 
-/                 = link_to("Pending Approval", vendor_path(vendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
-/             -elsif vendor.approved != false
-/               %button.unapproved.btn
-/                 = link_to("Approved", vendor_path(vendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
-/           %h4
-/             CLOSED
-/     %a.distancecontainer{href: "https://maps.google.com?saddr=Current+Location=#{vendor.latitude},#{vendor.longitude}", target: '_blank'}
-/       %div.numericdistance
-/       - if vendor.geocoded?                  
-/         = vendor.distance_from([request.location.latitude, request.location.longitude]).round(2)
-/       %br
-/       %div.distanceunit
-/         mi
+-if vendor.approved != false
+  .truck_open_maincontainer
+    .truck_distance_container
+      .truck_distance_text
+        - if vendor.geocoded?                  
+          = vendor.distance_from([request.location.latitude, request.location.longitude]).round(2)
+        %span.truck_miles_text
+          mi
+    .truck_name_text
+      = link_to vendor.name, controller: "vendors", action: "show", id: vendor
+    .truck_description_text
+      =vendor.description
 
-/ -elsif current_user == true && current_user.admin == true
+    .truck_opensign_container
+      .truck_opensign_text
+        OPEN
+      .truck_tilltime_text
+        till 2pm
+    .truck_buttons_container
+      %a.truck_menubutton_container.truck_menucallbutton_text{:href => "#"}
+        MENU!
+      %a.truck_callbutton_container.truck_menucallbutton_text{:href => "#"}
+        CALL!
+      %a.truck_mapbutton_container.truck_mapbutton_text{href: "https://maps.google.com?saddr=Current+Location=#{vendor.latitude},#{vendor.longitude}", target: '_blank'}
+        MAP!
+  %a{:href => vendor.url, :target => "_blank"}=vendor.url
+  -if vendor.user_id == current_user.id || current_user.admin
+    %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
+  -if current_user.admin
+    - if vendor.approved != true
+      %button.unapproved.btn 
+        = link_to("Pending Approval", vendor_path(vendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
+    -elsif vendor.approved != false
+      %button.unapproved.btn
+        = link_to("Approved", vendor_path(vendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
+-elsif current_user.admin == true
+  .truck_closed_maincontainer
+    .truck_name_text
+      = link_to vendor.name, controller: "vendors", action: "show", id: vendor
+    .truck_description_text
+      =vendor.description
+    .truck_closedsign_container
+      .truck_closedsign_text
+        CLOSED
+      .truck_tilltime_text
+        till 2pm 2/3/16
+  %a{:href => vendor.url, :target => "_blank"}=vendor.url
+  -if vendor.user_id == current_user.id || current_user.admin
+    %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
+  -if current_user.admin
+    - if vendor.approved != true
+      %button.unapproved.btn 
+        = link_to("Pending Approval", vendor_path(vendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
+    -elsif vendor.approved != false
+      %button.unapproved.btn
+        = link_to("Approved", vendor_path(vendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
 / %div.truckentry.vendor-closed
 /   %div.truckname.container
 /     %div
@@ -35,9 +62,9 @@
 /         =vendor.description
 /         %br
 /         %a{:href => vendor.url, :target => "_blank"}=vendor.url
-/         -if current_user == true && vendor.user_id == current_user.id || current_user == true && current_user.admin
+/         -if vendor.user_id == current_user.id || current_user.admin
 /           %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
-/         -if current_user == true && current_user.admin
+/         -if current_user.admin
 /           - if vendor.approved != true
 /             %button.unapproved.btn 
 /               = link_to("Pending Approval", vendor_path(vendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
@@ -55,86 +82,37 @@
 /       mi
 
 
+/ .truck_open_maincontainer
+/   .truck_distance_container
+/     .truck_distance_text
+/       3.5
+/       %span.truck_miles_text
+/         mi
+/   .truck_name_text
+/     AUTOMATIC TACO
+/   .truck_description_text
+/     A neue Southern taqueria
+/   .truck_opensign_container
+/     .truck_opensign_text
+/       OPEN
+/     .truck_tilltime_text
+/       till 2pm  
+/   .truck_buttons_container
+/     %a.truck_menubutton_container.truck_menucallbutton_text{:href => "#"}
+/       MENU!
+/     %a.truck_callbutton_container.truck_menucallbutton_text{:href => "#"}
+/       CALL!
+/     %a.truck_mapbutton_container.truck_mapbutton_text{:href => "#"}
+/       MAP!
 
 
-
-
-
-
-
-
-
-
-
--if vendor.approved != false
-  -if current_user === true
-    %div.vendor-edit-container
-      -if current_user == true && vendor.user_id == current_user.id || current_user == true && current_user.admin
-        %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
-  %div.vendor-container
-    %div.vendor-header
-      %div.vendor-distance
-        %span.distance-number
-          - if vendor.geocoded?                  
-            = vendor.distance_from([38.833882,-104.821363]).round(2)
-            / # = vendor.distance_from([request.location.latitude, request.location.longitude]).round(2)
-        %span.distance-miles
-          miles
-      %div.vendor-name
-        %div.vendor-name-text
-          = link_to vendor.name, controller: "vendors", action: "show", id: vendor
-        %div.vendor-description-text
-          = truncate(vendor.description, :length => 34)
-    %div.vendor-left-content
-      %div.vendor-time
-        %div.open-closed
-          OPEN
-        %div.open-time
-          till 2pm
-    %div.vendor-right-content
-      %div.vendor-menu
-      %a{href: vendor.url, target: '_blank'}
-        %div.vendor-website
-          WEBSITE
-      %a{href: "https://maps.google.com?saddr=Current+Location=#{vendor.latitude},#{vendor.longitude}", target: '_blank'}
-        %div.vendor-map
-          MAP
--elsif current_user == true && current_user.admin == true
-  %div.vendor-edit-container
-    -if current_user == true && vendor.user_id == current_user.id || current_user == true && current_user.admin
-      %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: vendor.id)
-    -if current_user == true && current_user.admin
-      - if vendor.approved != true
-        %button.unapproved.btn 
-          = link_to("Pending Approval", vendor_path(vendor.id, "vendor[approved]" => true), method: :put, :data => {:confirm => 'Are you sure?'})
-      -elsif vendor.approved != false
-        %button.unapproved.btn
-          = link_to("Approved", vendor_path(vendor.id, "vendor[approved]" => false), method: :put, :data => {:confirm => 'Are you sure?'})
-  %div.vendor-container.vendor-closed
-    %div.vendor-header
-      %div.vendor-distance
-        %span.distance-number
-          - if vendor.geocoded?                  
-            = vendor.distance_from([38.833882,-104.821363]).round(2)
-            / # = vendor.distance_from([request.location.latitude, request.location.longitude]).round(2)
-        %span.distance-miles
-          miles
-      %div.vendor-name
-        %div.vendor-name-text
-          = link_to vendor.name, controller: "vendors", action: "show", id: vendor
-        %div.vendor-description-text
-          = truncate(vendor.description, :length => 34)
-    %div.vendor-left-content
-      %div.vendor-time
-        %div.open-closed
-          OPEN
-        %div.open-time
-          till 2pm
-    %div.vendor-right-content
-      %div.vendor-menu
-      %a{href: vendor.url, target: '_blank'}
-        %div.vendor-website
-          WEBSITE
-      %a{href: "https://maps.google.com?saddr=Current+Location=#{vendor.latitude},#{vendor.longitude}", target: '_blank'}
-        %div.vendor-map
-          MAP
+/ .truck_closed_maincontainer
+/   .truck_name_text
+/     AUTOMATIC TACO
+/   .truck_description_text
+/     A neue Southern taqueria
+/   .truck_closedsign_container
+/     .truck_closedsign_text
+/       CLOSED
+/     .truck_tilltime_text
+/       till 2pm 2/3/16

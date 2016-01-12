@@ -1,7 +1,8 @@
 = @vendor.name
 = @vendor.address
 
-- for vendor in @vendors.nearbys(10)
-  %li
-    = link_to @vendor.address, @vendor
-    (#{@vendor.distance})
+.body_container
+  - for vendor in @vendors.nearbys(10)
+    %li
+      = link_to @vendor.address, @vendor
+      (#{@vendor.distance})
