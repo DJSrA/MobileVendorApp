@@ -1,0 +1,122 @@
+.form-inputs {
+  input[type="email"] {
+    width: 270px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 23px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFEB;
+    padding-top: 5px;
+    display: block;
+    margin: 20px auto 35px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    padding-left: 10px;
+   -webkit-transition: all 0.2s;
+   -moz-transition: all 0.2s;
+   -ms-transition: all 0.2s;
+   -o-transition: all 0.2s;
+   transition: all 0.2s;
+   :hover {
+   background: rgba(255,255,255,0.4);
+   cursor: pointer;
+   }
+  }
+  input[type="password"] {
+     width: 270px;
+     height: 44px;
+     background: rgba(255, 255, 255, 0.2);
+     border-radius: 23px;
+     color: #FFFFFF;
+     border: 2px solid #FFFFEB;
+     padding-top: 5px;
+     display: block;
+     margin: 20px auto 3px;
+     letter-spacing: 2px;
+     font-size: 13px;
+     padding-left: 10px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    :hover {
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    }
+  } 
+
+  a {
+    font-family: 'Nexa_light';
+    color: #BDBDBD;
+    letter-spacing: 1px;
+  }
+
+  span {
+    padding-bottom: 20px;
+    font-family: 'Nexa_light';
+    color: #BDBDBD;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  label {
+    font-family: 'Nexa_light';
+    color: #BDBDBD;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+
+  .no-margin-bottom-input {
+    margin: 20px auto 20px !important;
+  }
+
+  .margin-top-input {
+    display: block;
+    padding-top: 10px;
+  }
+  
+}
+
+
+
+.form-actions {
+  a {
+    color: #BDBDBD;
+    letter-spacing: 1px;
+    font-family: 'Nexa_light';
+  }
+
+  input {
+    width: 270px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 23px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFEB;
+    padding-top: 5px;
+    display: block;
+    margin: 20px auto 35px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    padding-left: 10px;
+   -webkit-transition: all 0.2s;
+   -moz-transition: all 0.2s;
+   -ms-transition: all 0.2s;
+   -o-transition: all 0.2s;
+   transition: all 0.2s;
+   :hover {
+   background: rgba(255,255,255,0.4);
+   cursor: pointer;
+   }
+  }
+
+  .cta {
+    margin-top: 40px;
+    background: rgba(255,255,255,0.4);
+    :hover {
+      background: rgba(255,255,255,0.6)
+    }
+  }
+
+}

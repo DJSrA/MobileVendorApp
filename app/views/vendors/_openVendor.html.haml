@@ -7,7 +7,7 @@
           =openVendor.description
           %br
           %a{:href => openVendor.url, :target => "_blank"}= openVendor.url
-          -if openVendor.user_id == current_user.id || current_user.admin
+          -if current_user && openVendor.user_id == current_user.id || current_user && current_user.admin
             %button.btn.btn-default.create-button= link_to "+ Edit Vendor", edit_vendor_path(id: openVendor.id)
           -if current_user.admin
             - if openVendor.approved != true

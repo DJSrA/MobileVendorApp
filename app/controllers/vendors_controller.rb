@@ -1,13 +1,15 @@
 class VendorsController < ApplicationController
   before_filter :authenticate_user!
   before_action :set_vendor, only: [:show, :edit, :update, :destroy]
+  autocomplete :vendor, :name
+  autocomplete :vendor, :id
+
+
 
   def index
-    # @user = current_user
     date = DateTime.now
-    @vendors = Vendor.where("date_open != ?", Date.current)
-    # @openVendors = Vendor.where(date_open: Date.today)
-    @openVendors = Vendor.where("date_open == ?", Date.current )
+    @vendors = Vendor.where("date_open != ?", Date.current).near([request.location.latitude, request.location.longitude], 6000)
+    @openVendors = Vendor.where("date_open == ?", Date.current ).near([request.location.latitude, request.location.longitude], 6000)
   end
 
   def show
@@ -59,6 +61,10 @@ class VendorsController < ApplicationController
       format.html { redirect_to vendors_path, notice: 'vendor was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def getVendor
+    @vendor = Vendor.where(name: params[:vendor_name]).take.id
   end
 
   private

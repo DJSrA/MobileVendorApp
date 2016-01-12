@@ -11,6 +11,11 @@ gem 'simple_form'
 gem 'devise'
 gem 'geocoder'
 gem 'jquery-timepicker-rails'
+gem "font-awesome-rails"
+gem 'fuzzily'
+gem 'rails4-autocomplete'
+gem 'jquery-ui-rails'
+
 
 gem 'jquery-rails'
 gem 'turbolinks'

@@ -1,3 +1,40 @@
-%h1 Hello  World!
+%div.home-bg
+%div.home-blur
+%div.home-container
+  / %div.header-text
+  %h1 WHERE THE TRUCK
+  %div.menu.fa.fa-bars
+  %div.home-text
+    %h4
 
-%button.btn.btn-default.create-button= link_to "+ New Vendor", new_vendor_path
+  %div.cta-title
+    %p BECAUSE THE BEST FOOD</br>IS MOBILE
+  %button.cta.search-near-you
+    = link_to "FIND A TRUCK NEAR ME", vendors_path
+  %button.cta.search-by-name.cta-input
+    / = autocomplete_field_tag :search, params[:search], autocomplete_vendor_name_vendors_path, {:class => "find-truck-input", :onblur => "this.placeholder = 'FIND A TRUCK BY NAME'", :onfocus => "this.placeholder = ''", :placeholder => "FIND A TRUCK BY NAME", type: "search"}
+    = autocomplete_field_tag :search, params[:search], autocomplete_vendor_name_vendors_path, class: "search-query find-truck-input", :onblur => "this.placeholder = 'FIND A TRUCK BY NAME'", :onfocus => "this.placeholder = ''", :placeholder => "FIND A TRUCK BY NAME", type: "search", name: 'vendor_name', data: {autocomplete: autocomplete_vendor_name_vendors_path}, :element_id=>"#id"
+    / # -if params['search-query'] != ''
+    %div{:class => "fa fa-search", :href => vendors_path}
+  %div.footer-content
+    -if current_user
+      %p YOU ARE LOGGED IN.  VIEW TRUCKS
+      %span
+        %a
+          = link_to "HERE", vendors_path
+    -else
+      %p TRUCKERS, SIGN UP
+      %span
+        %a
+          = link_to "HERE", new_user_registration_path
+%div.menu-container
+  %div.close-menu.fa.fa-times
+  %ul.menu-options
+    %li.menu-option
+      LIST OF TRUCKS
+    %li.menu-option
+      LIST OF TRUCKS
+    %li.menu-option
+      LIST OF TRUCKS
+    %li.menu-option
+      LIST OF TRUCKS

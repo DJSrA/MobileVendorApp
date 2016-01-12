@@ -19,24 +19,63 @@ html {
 //   background-color: #ECBC54;
 // }
 
+.vendor-edit-container {
+  width: 90%;
+  max-width: 423px;
+  height: 50px;
+  background: #232323;
+  margin: 0 auto;
+}
+
+.nav-header-text {
+  color: #FFFFFF;
+  font-family: 'Nexa_light';
+  width: 50%;
+  vertical-align: bottom;
+  display: inline-block;
+  font-size: 26px;
+  float: left;
+  text-align: left;
+  padding: 21px 0 10px 10px;
+  letter-spacing: 2px;
+}
+
+.vendor-bg {
+  background: url(WheretheTruckPHOTO.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(20px);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.vendors-container {
+  position: relative;
+  z-index: 2;
+}
+
 .headerblue {
   width: 100%;
   position: fixed;
-  height: 105px;
-  background-color: #96B2B0;
+  height: 60px;
+  background-color: #191A1D;
   top: 0px;
   right: 0;
   left: 0;
   margin-right: auto;
   margin-left: auto;
   z-index: 3;
-  -webkit-filter: drop-shadow(0px 5px 1px rgba(30,30,30,0.85));
-      filter: drop-shadow(0px 5px 1px rgba(30,30,30,0.85));
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -ms-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
+  // -webkit-filter: drop-shadow(0px 5px 1px rgba(30,30,30,0.85));
+  //     filter: drop-shadow(0px 5px 1px rgba(30,30,30,0.85));
+  //     -webkit-transition: all 0.3s;
+  //     -moz-transition: all 0.3s;
+  //     -ms-transition: all 0.3s;
+  //     -o-transition: all 0.3s;
+  //     transition: all 0.3s;
   .small {
     width: 100%;
     position: fixed;
@@ -59,7 +98,7 @@ html {
 }
 
 .centeredtruckentries {
-  margin-top: 240px;
+  margin-top: 60px;
 }
   
   
@@ -96,16 +135,18 @@ html {
   background-image: url(FoodTruckHeaderGraphic.svg);
   background-repeat: no-repeat;
   width: 26%;
+
+  max-width: 200px;
   background-size: 100%;
-  margin: 30px auto;
-  height: 130px;
-  -webkit-filter: drop-shadow(5px 8px 1px rgba(30, 30, 30, 0.75));
-  filter: drop-shadow(5px 8px 1px rgba(30, 30, 30, 0.75));
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  margin: 30px auto 0;
+  height: 60px;
+  // -webkit-filter: drop-shadow(5px 8px 1px rgba(30, 30, 30, 0.75));
+  // filter: drop-shadow(5px 8px 1px rgba(30, 30, 30, 0.75));
+  // -webkit-transition: all 0.3s;
+  // -moz-transition: all 0.3s;
+  // -ms-transition: all 0.3s;
+  // -o-transition: all 0.3s;
+  // transition: all 0.3s;
   .small {
     background-image: url(FoodTruckHeaderGraphicsmall.svg);
     background-repeat: no-repeat;
@@ -114,13 +155,13 @@ html {
     width: 600px;
     margin: 0 auto;
     height: 200px;
-    -webkit-filter: drop-shadow(5px 8px 1px rgba(30,30,30,0.75));
-        filter: drop-shadow(5px 8px 1px rgba(30,30,30,0.75));
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transition: all 0.3s;
+    // -webkit-filter: drop-shadow(5px 8px 1px rgba(30,30,30,0.75));
+    //     filter: drop-shadow(5px 8px 1px rgba(30,30,30,0.75));
+    //     -webkit-transition: all 0.3s;
+    //     -moz-transition: all 0.3s;
+    //     -ms-transition: all 0.3s;
+    //     -o-transition: all 0.3s;
+    //     transition: all 0.3s;
 }
 }
 
@@ -197,7 +238,7 @@ a.menubuttoncontainer {
 }
 
 .truckname {
-  font-family: 'Walter Turncoat', cursive;
+  // font-family: 'Walter Turncoat', cursive;
   font-size: 2em;
   text-align: left;
   color: #bbbdbf;
@@ -213,8 +254,7 @@ a.menubuttoncontainer {
 }
   
 .truckdescription {
-  font-family: georgia;
-  font-style: italic;
+  // font-family: georgia;
   font-size: 1rem;
   display: block;
   letter-spacing: 1.5px;
@@ -259,8 +299,7 @@ a.distancecontainer {
 .numericdistance {
   // position: relative;
   display: inline-block;
-  font-family: georgia;
-  font-style: italic;
+  // font-family: georgia;
   font-size: 2rem;
   line-height: 100%;
   font-weight: 200;
@@ -272,8 +311,7 @@ a.distancecontainer {
 .numericdistance_closed {
   // position: relative;
   display: inline-block;
-  font-family: georgia;
-  font-style: italic;
+  // font-family: georgia;
   font-size: 2rem;
   line-height: 200%;
   font-weight: 200;
@@ -285,8 +323,7 @@ a.distancecontainer {
 .distanceunit {
   position: relative;
   display: inline-block;
-  font-family: georgia;
-  font-style: italic;
+  // font-family: georgia;
   font-size: 1rem;
   line-height: 100%;
   font-weight: 200;
@@ -297,8 +334,7 @@ a.distancecontainer {
 .distanceunit_closed {
   position: relative;
   display: inline-block;
-  font-family: georgia;
-  font-style: italic;
+  // font-family: georgia;
   font-size: 1rem;
   line-height: 90%;
   font-weight: 200;
@@ -457,10 +493,110 @@ a.distancecontainer {
 }
   
 .extramenubartext {
-  font-family: georgia;
-  font-style: italic;
+  // font-family: georgia;
   font-size: 2.75rem;
   color: #D36318;
   letter-spacing: 2px;
   text-align: center;
+}
+
+
+// NEW STYLES NEW STYLES!
+
+.vendor-container{
+  width: 90%;
+  height: 180px;
+  max-width: 423px;
+  background: #191A1D;
+  margin: 0 auto 20px;
+  .vendor-header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    .vendor-distance {
+      height: 50px;
+      width: 16%;
+      vertical-align: top;
+      border: 3px solid #D2D2D2;
+      color: #D2D2D2;
+      float: left;
+      display: inline-block;
+      font-family: 'Nexa-light' !important;
+      .distance-number {
+        font-size: 23px;
+        letter-spacing: 1px;
+      }
+      .distance-miles {
+
+      }
+    }
+    .vendor-name {
+      width: 78%;
+      float: right;
+      vertical-align: top;
+      height: 59px;
+      text-align: right;
+      color: #D2D2D2;
+      box-sizing: border-box;
+      line-height: 30px;
+      display: inline-block;
+      padding: 0 12px;
+      .vendor-name-text {
+        font-family: 'Nexa_bold';
+        font-size: 26px;
+        letter-spacing: 2px;
+      }
+      .vendor-description-text {
+        font-family: 'Nexa_light';
+      }
+    }
+
+  }
+  .vendor-left-content {
+    height: 56%;
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    width: 39%;
+    float: left;
+    padding: 0 0px 0px 10px;
+    .vendor-time {
+      background: #D2D2D2;
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      float: left;
+    }
+  }
+  .vendor-right-content {
+    height: 104px;
+    display: inline-block;
+    width: 59%;
+    .vendor-menu {
+      background: #D2D2D2;
+      height: 40%;
+      margin-right: 2px;
+      width: 47%;
+      display: inline-block;
+    }
+    .vendor-website {
+      vertical-align: top;
+      background: #D2D2D2;
+      height: 40%;
+      margin-right: 4px;
+      width: 46%;
+      display: inline-block;
+    }
+    .vendor-map {
+      height: 51%;
+      width: 96%;
+      box-sizing: border-box;
+      background: #D2D2D2;
+      margin-left: 2px;
+      margin-top: 3px;
+    }
+    
+  }
+  // CLOSED COLOR 
 }

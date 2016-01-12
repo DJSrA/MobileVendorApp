@@ -1,0 +1,261 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+/* @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ @import "home_page_styles";
+*/
+
+ @import "devise_log_in_out_styles";
+
+ @import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+
+ @font-face {
+     font-family: 'Nexascript-free';
+     src: url('/assets/NexaScript-Free.otf');
+ }
+
+ @font-face {
+     font-family: 'Nexa_bold';
+     src: url('/assets/Nexa_Free_Bold.otf');
+ }
+
+ @font-face {
+     font-family: 'Nexa_light';
+     src: url('/assets/Nexa_Free_Light.otf');
+ }
+
+ @font-face {
+     font-family: 'Airbag';
+     src: url('/assets/AirbagFree-Regular.otf');
+     src: url('/assets/AirbagFree-Regular.ttf') format('truetype'),
+ }
+
+ @font-face {
+     font-family: 'MatchbookRegular';
+     src: url('/assets/MatchbookRegular.otf');
+ }
+
+ @font-face {
+     font-family: 'MatchbookTexture';
+     src: url('/assets/MatchbookTexture.otf');
+ }
+
+ @font-face {
+     font-family: 'Carton-Slab';
+     src: url('/assets/Carton-Slab.otf');
+ }
+
+ // adelle-sans available
+
+ body {
+   margin: 0;
+   /*background-color: #3C4049;*/
+   color: #212121;
+ }
+
+ ul, ol, li {
+   list-style-type: none;
+ }
+
+ * {
+   text-shadow: none;
+   // font-family: "ff-basic-gothic-web-pro", Helvetica, Arial;
+ }
+
+
+ p {
+  font-size: 15px;
+  font-family: "Nexa_bold" !important;
+ }
+
+ a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Nexa_bold";
+ }
+
+ /* Change the white to any color ;) */
+ input:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0px 1000px white inset;
+ }
+
+ // input:-webkit-autofill {
+ //   color: #2a2a2a !important;
+ // }
+ .cta {
+  width: 270px;
+  height: 45px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 23px;
+  font-size: 13px;
+  color: #FFFFFF;
+  border: 2px solid #FFFFEB;
+  padding-top: 7px;
+  display: block;
+  margin: 20px auto 35px;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+ }
+
+ .cta:hover {
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+ }
+
+ /* Place Holder CSS */
+ ::-webkit-input-placeholder {
+   color: #FFFFFF;
+ }
+ :-moz-placeholder {
+   color: #FFFFFF;
+ }
+ ::-moz-placeholder {
+   color: #FFFFFF;
+ }
+ :-ms-input-placeholder {  
+   color: #FFFFFF;
+ }
+
+ /* Place Holder CSS for Focus */
+ :hover::-webkit-input-placeholder {
+   opacity: 1;
+   -webkit-transition: opacity 0.35s ease-in-out;
+   transition: opacity 0.35s ease-in-out;
+ }
+ :hover:-moz-placeholder {
+   opacity: 1;
+   -moz-transition: opacity 0.35s ease-in-out;
+   transition: opacity 0.35s ease-in-out;
+ }
+ :hover::-moz-placeholder {
+   opacity: 1;
+   -moz-transition: opacity 0.35s ease-in-out;
+   transition: opacity 0.35s ease-in-out;
+ }
+ :hover:-ms-input-placeholder {  
+   opacity: 1;
+   -ms-transition: opacity 0.35s ease-in-out;
+   transition: opacity 0.35s ease-in-out;
+ }
+
+ /* Place Holder CSS for Focus */
+ :focus::-webkit-input-placeholder {
+   opacity: 0;
+   -webkit-transition: opacity 0.35s ease-in-out;
+   transition: opacity 0.35s ease-in-out;
+ }
+ :focus:-moz-placeholder {
+   opacity: 0;
+   -moz-transition: opacity 0.35s ease-in-out;
+   transition: opacity 0.35s ease-in-out;
+ }
+ :focus::-moz-placeholder {
+   opacity: 0;
+   -moz-transition: opacity 0.35s ease-in-out;
+   transition: opacity 0.35s ease-in-out;
+ }
+ :focus:-ms-input-placeholder {  
+   opacity: 0;
+   -ms-transition: opacity 0.35s ease-in-out;
+   transition: opacity 0.35s ease-in-out;
+ }
+
+ input, button {
+  outline: none;
+ }
+
+ /*--------------------------------*/
+
+ .ui-timepicker-wrapper {
+  overflow-y: auto;
+  height: 150px;
+  width: 6.5em;
+  background: #fff;
+  border: 1px solid #ddd;
+  -webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+  -moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+  box-shadow:0 5px 10px rgba(0,0,0,0.2);
+  outline: none;
+  z-index: 10001;
+  margin: 0;
+ }
+
+ .ui-timepicker-wrapper.ui-timepicker-with-duration {
+  width: 13em;
+ }
+
+ .ui-timepicker-wrapper.ui-timepicker-with-duration.ui-timepicker-step-30,
+ .ui-timepicker-wrapper.ui-timepicker-with-duration.ui-timepicker-step-60 {
+  width: 11em;
+ }
+
+ .ui-timepicker-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+ }
+
+ .ui-timepicker-duration {
+  margin-left: 5px; color: #888;
+ }
+
+ .ui-timepicker-list:hover .ui-timepicker-duration {
+  color: #888;
+ }
+
+ .ui-timepicker-list li {
+  padding: 3px 0 3px 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #000;
+  list-style: none;
+  margin: 0;
+ }
+
+ .ui-timepicker-list:hover .ui-timepicker-selected {
+  background: #fff; color: #000;
+ }
+
+ li.ui-timepicker-selected,
+ .ui-timepicker-list li:hover,
+ .ui-timepicker-list .ui-timepicker-selected:hover {
+  background: #1980EC; color: #fff;
+ }
+
+ li.ui-timepicker-selected .ui-timepicker-duration,
+ .ui-timepicker-list li:hover .ui-timepicker-duration {
+  color: #ccc;
+ }
+
+ .ui-timepicker-list li.ui-timepicker-disabled,
+ .ui-timepicker-list li.ui-timepicker-disabled:hover,
+ .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+  color: #888;
+  cursor: default;
+ }
+
+ .ui-timepicker-list li.ui-timepicker-disabled:hover,
+ .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+  background: #f2f2f2;
+ }
