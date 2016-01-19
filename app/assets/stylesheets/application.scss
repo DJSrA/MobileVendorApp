@@ -67,6 +67,7 @@
    margin: 0;
    /*background-color: #3C4049;*/
    color: #212121;
+   overflow-x: hidden;
  }
 
  ul, ol, li {
@@ -184,6 +185,18 @@
  input, button {
   outline: none;
  }
+
+#element::-webkit-scrollbar { 
+  width: 0 !important 
+}
+
+#element {
+ -ms-overflow-style: none; 
+}
+
+::-webkit-scrollbar {
+display: none;
+}
 
  /*--------------------------------*/
 

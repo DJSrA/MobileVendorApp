@@ -9,6 +9,8 @@ html {
   // max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  overflow-x: hidden;
+
 }
 
 .vendor-closed {
@@ -36,8 +38,17 @@ html {
   font-size: 26px;
   float: left;
   text-align: left;
-  padding: 21px 0 10px 10px;
+  padding: 13px 0 10px 10px;
   letter-spacing: 2px;
+  h1 {
+    margin: 0px;
+  }
+  .navbar-link {
+    position: absolute;
+    right: 20px;
+    top: 37px;
+    font-size: 14px;
+  }
 }
 
 .vendor-bg {
@@ -614,16 +625,16 @@ html {
   max-width: 600px;
   min-width:320px;
   height: 150px;
-  background-color: #D15127;
+  background-color: #191A1D;
   padding: 7px;
   margin: 7px auto 0 auto;
   position: relative;
 }
 
 .truck_distance_container {
-  width: 22.1%;
-  height: 64px;
-  border: 7px solid #ECBC54;
+  width: 23.7%;
+  height: 67px;
+  border: 2px solid #ECBC54;
   position: absolute;
   top: 7px;
   left: 7px;
@@ -633,8 +644,8 @@ html {
 .truck_distance_text {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
-  color: #ECBC54;
-  margin-bottom: 7px;
+  color: #FFFFFF;
+  margin: 10px 0 7px 0;
   line-height: 110%;
   position: relative;
   display: inline-block;
@@ -657,12 +668,16 @@ html {
   height: auto;
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
+  letter-spacing: 2px;
   text-align: right;
   color: #ECBC54;
   line-height: 110%;
   position: relative;
   margin-top: 7px;
   display: block;
+  a {
+    color: #FFFFFF;
+  }
 }
 
 .truck_description_text {
@@ -679,9 +694,9 @@ html {
 
 .truck_opensign_container {
   width: 25%;
-  height: 65px;
+  height: 73px;
   background-color: #31343D;
-  margin: 18px auto 0 auto;
+  margin: 11px auto 0 auto;
   float: left;
   text-align: center;
 }
@@ -689,7 +704,7 @@ html {
 .truck_opensign_text {
   font-family: 'Oswald', sans-serif;
   font-size: 2rem;
-  color: #ECBC54;
+  color: #FFFFFF;
   margin-bottom: 7px;
   line-height: 110%;
   position: relative;
@@ -701,22 +716,25 @@ html {
   font-family: 'Georgia', sans-serif;
   font-size: 1rem;
   font-style: italic;
-  color: #ECBC54;
+  color: #FFFFFF;
   line-height: 110%;
   position: relative;
   display: block;
 }
 
 .truck_buttons_container {
-  width: 72%;
+  width: 73%;
   height: 65px;
-  background-color: #31343D;
-  border-left: 7px solid #D15127;
+  // background-color: #31343D;
+  // border-left: 7px solid #191A1D;
   margin-top: 10px;
-  padding: 4px;
+  padding: 4px 0 0 9px;
   float: left;
   bottom: 7px;
   right: 7px;
+  a {
+    background-color: #31343D;
+  }
 }
 
 a.truck_mapbutton_container {
@@ -808,6 +826,7 @@ a.truck_callbutton_container:active {
   max-width: 600px;
   min-width:320px;
   height: 90px;
+  background-color: #191A1D;
   border: 2px solid #B0C0BC;
   padding: 7px;
   margin: 7px auto 0 auto;
@@ -833,4 +852,103 @@ a.truck_callbutton_container:active {
   line-height: 110%;
   position: relative;
   padding: 15% 0 0 0;
+}
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .truck_buttons_container {
+      width: 72%;
+    }
+    .truck_distance_text {
+      font-size: 1.5rem;
+    }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .truck_buttons_container {
+      width: 72%;
+    }
+    .truck_distance_text {
+      font-size: 1.5rem;
+    }
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    .truck_buttons_container {
+      width: 72%;
+    }
+    .truck_distance_text {
+      font-size: 1.5rem;
+    }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    .truck_buttons_container {
+      width: 72%;
+    }
+    .truck_distance_text {
+      font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+  .truck_open_maincontainer {
+    height: 140px;
+  }
+  .truck_buttons_container {
+    width: 72%;
+  }
+  .truck_distance_text {
+    font-size: 1.5rem;
+  }
+  .truck_distance_container {
+    height: 58px;
+  }
+  .truck_opensign_container {
+    height: 71px;
+  }
+  .truck_open_maincontainer {
+    max-width: 386px;
+  }
+  .truck_closed_maincontainer {
+    max-width: 386px;
+  }
+  .truck_name_text {
+    font-size: 1.5rem;
+  }
+  .truck_opensign_text {
+    font-size: 1.5rem;
+  }
+  .nav-header-text {
+    font-size: 0.75rem;
+    padding: 22px 0 10px 10px;
+  }
 }

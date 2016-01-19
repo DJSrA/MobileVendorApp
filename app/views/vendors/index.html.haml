@@ -10,7 +10,6 @@
     Logged in as 
     = current_user.email
   %div.centeredtruckentries
-  = link_to 'Log out', destroy_user_session_path, method: :delete
   = render partial: "openVendor", collection: @openVendors
   = render partial: "vendor", collection: @vendors
 

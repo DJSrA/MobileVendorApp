@@ -37,7 +37,14 @@ $(function(){
   });
 
 
-
+  $("#vendors th a, #vendors .pagination a").live("click", function() {
+    $.getScript(this.href);
+    return false;
+  });
+  $("#vendors_search input").keyup(function() {
+    $.get($("#vendors_search").attr("action"), $("#vendors_search").serialize(), null, "script");
+    return false;
+  });
   // $('a.fa-search').bind('railsAutocomplete.select', function(event, data){
   //   $('a.fa-search').setAttribute('href', '/vendors/' + data.item.id
   //   alert(data.item.id);
