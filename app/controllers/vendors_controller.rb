@@ -1,15 +1,20 @@
 class VendorsController < ApplicationController
   before_filter :authenticate_user!
   before_action :set_vendor, only: [:show, :edit, :update, :destroy]
-  autocomplete :vendor, :name
-  autocomplete :vendor, :id
+  # autocomplete :vendor, :name
+  # autocomplete :vendor, :id
 
 
 
   def index
     date = DateTime.now
-    @vendors = Vendor.where("date_open != ?", Date.current).near([request.location.latitude, request.location.longitude], 6000)
     @openVendors = Vendor.where("date_open == ?", Date.current ).near([request.location.latitude, request.location.longitude], 6000)
+
+    if params[:search]
+      @vendors = Vendor.search(params[:search]).order("created_at DESC")
+    else
+      @vendors = Vendor.where("date_open != ?", Date.current).near([request.location.latitude, request.location.longitude], 6000)
+    end
   end
 
   def show

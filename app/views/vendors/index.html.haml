@@ -2,6 +2,8 @@
 %div.vendors-container
   %div.headerblue
     %div.nav-header-text
+      = text_field_tag :search, params[:search], class: "span2", placeholder: "Search Vendors"
+      %button.btn{:type => "submit"} Submit
       %h1 
         = link_to "WTT", root_path
       -if user_signed_in?
