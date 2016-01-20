@@ -1,6 +1,6 @@
 class Vendor < ActiveRecord::Base
   # fuzzily_searchable :name
-
+  acts_as_likeable
   belongs_to :vendors
   geocoded_by :address
   after_validation :geocode, :if => :address_changed?

@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :vendors do
     get :autocomplete_vendor_name, :on => :collection
     get :autocomplete_vendor_id, :on => :collection
+    post "like", :controller => "socializations"
+    post "unlike", :controller => "socializations"
   end
 
   resources :sessions

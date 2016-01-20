@@ -16,6 +16,8 @@ gem 'fuzzily'
 gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
 gem 'will_paginate', '~> 3.0.6'
+gem 'socialization'
+gem 'carrierwave'
 
 
 gem 'jquery-rails'

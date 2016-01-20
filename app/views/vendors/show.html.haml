@@ -1,8 +1,6 @@
-= @vendor.name
-= @vendor.address
-
-.body_container
-  - for vendor in @vendors.nearbys(10)
-    %li
-      = link_to @vendor.address, @vendor
-      (#{@vendor.distance})
+.vendor_body_container
+  .jumbotron
+    %h1 Hello, world!
+    %p ...
+  %li
+    = link_to @vendor.address, @vendor

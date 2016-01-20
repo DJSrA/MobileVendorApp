@@ -9,7 +9,8 @@ class VendorsController < ApplicationController
   def index
     date = DateTime.now
     @openVendors = Vendor.where("date_open == ?", Date.current ).near([request.location.latitude, request.location.longitude], 6000)
-
+    # @like = @vendor.likes.new 
+    # @likes = Like.all
     if params[:search]
       @vendors = Vendor.search(params[:search]).order("created_at DESC")
     else
