@@ -20,6 +20,11 @@ class VendorsController < ApplicationController
 
   def show
     @vendor = Vendor.find(params[:id])
+    if @vendor.avatar.url
+      @background = @vendor.avatar.url
+    else
+      @background = '"white-bg.png"'
+    end
   end
 
   def new
@@ -81,6 +86,6 @@ class VendorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_params
-      params.require(:vendor).permit(:name, :description, :url, :approved, :latitude, :longitude, :address, :open_time, :close_time, :date_open)
+      params.require(:vendor).permit(:name, :description, :url, :approved, :latitude, :longitude, :address, :open_time, :close_time, :date_open, :avatar)
     end
 end

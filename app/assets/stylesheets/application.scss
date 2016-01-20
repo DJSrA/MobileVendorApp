@@ -20,6 +20,10 @@
 
  @import "home_page_styles";
 */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
  @import "vendor_page";
 
  @import "devise_log_in_out_styles";
@@ -66,8 +70,10 @@
 
  body {
    margin: 0;
+   height: 100%;
    /*background-color: #3C4049;*/
    color: #212121;
+   background-color: #191A1D;
    overflow-x: hidden;
  }
 
@@ -275,4 +281,106 @@ display: none;
  .ui-timepicker-list li.ui-timepicker-disabled:hover,
  .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
   background: #f2f2f2;
+ }
+
+ /* ----------- iPhone 4 and 4S ----------- */
+
+ /* Portrait and Landscape */
+ @media only screen 
+   and (min-device-width: 320px) 
+   and (max-device-width: 480px)
+   and (-webkit-min-device-pixel-ratio: 2) {
+
+     .truck_buttons_container {
+       width: 72%;
+     }
+     .truck_distance_text {
+       font-size: 1.5rem;
+     }
+ }
+
+ /* ----------- iPhone 5 and 5S ----------- */
+
+ /* Portrait and Landscape */
+ @media only screen 
+   and (min-device-width: 320px) 
+   and (max-device-width: 568px)
+   and (-webkit-min-device-pixel-ratio: 2) {
+
+     .truck_buttons_container {
+       width: 72%;
+     }
+     .truck_distance_text {
+       font-size: 1.5rem;
+     }
+ }
+
+ /* ----------- iPhone 6 ----------- */
+
+ /* Portrait and Landscape */
+ @media only screen 
+   and (min-device-width: 375px) 
+   and (max-device-width: 667px) 
+   and (-webkit-min-device-pixel-ratio: 2) { 
+
+     .truck_buttons_container {
+       width: 72%;
+     }
+     .truck_distance_text {
+       font-size: 1.5rem;
+     }
+ }
+
+ /* ----------- iPhone 6+ ----------- */
+
+ /* Portrait and Landscape */
+ @media only screen 
+   and (min-device-width: 414px) 
+   and (max-device-width: 736px) 
+   and (-webkit-min-device-pixel-ratio: 3) { 
+
+     .truck_buttons_container {
+       width: 72%;
+     }
+     .truck_distance_text {
+       font-size: 1.5rem;
+     }
+ }
+
+ @media (max-width: 500px) {
+
+   .truck_open_maincontainer {
+     height: 140px;
+   }
+   .truck_buttons_container {
+     width: 72%;
+   }
+   .truck_distance_text {
+     font-size: 1.5rem;
+   }
+   .truck_distance_container {
+     height: 58px;
+   }
+   .truck_opensign_container {
+     height: 71px;
+   }
+   .truck_open_maincontainer {
+     max-width: 386px;
+   }
+   .truck_closed_maincontainer {
+     max-width: 386px;
+   }
+   .truck_name_text {
+     font-size: 1.5rem;
+   }
+   .truck_opensign_text {
+     font-size: 1.5rem;
+   }
+   .nav-header-text {
+     font-size: 0.75rem;
+     padding: 22px 0 10px 10px;
+   }
+   .jumbotron-background-image {
+     background-attachment: inherit !important;
+   }
  }

@@ -1,4 +1,6 @@
 class Vendor < ActiveRecord::Base
+  mount_uploader :avatar, AvatarUploader
+
   # fuzzily_searchable :name
   acts_as_likeable
   belongs_to :vendors

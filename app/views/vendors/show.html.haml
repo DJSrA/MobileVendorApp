@@ -1,6 +1,11 @@
 .vendor_body_container
   .jumbotron
-    %h1 Hello, world!
-    %p ...
+    .jumbotron-background-image{:style => "background: url(#{@background }); background-attachment: fixed;"}
+    .jumbotron-image-cover
+      %h1 
+        = @vendor.name
+      %p
+        = @vendor.description
+      %button.btn.btn-default button
   %li
     = link_to @vendor.address, @vendor

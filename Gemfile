@@ -18,7 +18,7 @@ gem 'jquery-ui-rails'
 gem 'will_paginate', '~> 3.0.6'
 gem 'socialization'
 gem 'carrierwave'
-
+gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'jquery-rails'
 gem 'turbolinks'

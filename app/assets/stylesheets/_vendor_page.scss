@@ -1,0 +1,43 @@
+.vendor_body_container {
+  background-color: #191A1D;
+  color: #FFFFFF;
+  .jumbotron {
+    min-height: 40vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(20,20,20,0.6);
+    // z-index: 10;
+    .jumbotron-background-image {
+      -webkit-background-size: 100% auto;
+      -moz-background-size: 100% auto;
+      -o-background-size: 100% auto;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      // left: 0
+      z-index: 5;
+            // bottom: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .jumbotron-image-cover {
+      background-color: rgba(20,20,20,0.6);
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      z-index: 7;
+      width: 100%;
+      p {
+        font-family: 'Georgia', serif !important;
+      }
+    }
+    h1 {
+      margin-top: 0;
+    }
+  }
+}

@@ -6,10 +6,11 @@
 
 html {
   width: 100%;
-  // max-width: 1000px;
   margin: 0 auto;
   text-align: center;
+  height: 100%;
   overflow-x: hidden;
+  background-color: #191A1D;
 
 }
 
@@ -854,101 +855,3 @@ a.truck_callbutton_container:active {
   padding: 15% 0 0 0;
 }
 
-/* ----------- iPhone 4 and 4S ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-    .truck_buttons_container {
-      width: 72%;
-    }
-    .truck_distance_text {
-      font-size: 1.5rem;
-    }
-}
-
-/* ----------- iPhone 5 and 5S ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-    .truck_buttons_container {
-      width: 72%;
-    }
-    .truck_distance_text {
-      font-size: 1.5rem;
-    }
-}
-
-/* ----------- iPhone 6 ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
-    .truck_buttons_container {
-      width: 72%;
-    }
-    .truck_distance_text {
-      font-size: 1.5rem;
-    }
-}
-
-/* ----------- iPhone 6+ ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-    .truck_buttons_container {
-      width: 72%;
-    }
-    .truck_distance_text {
-      font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 500px) {
-
-  .truck_open_maincontainer {
-    height: 140px;
-  }
-  .truck_buttons_container {
-    width: 72%;
-  }
-  .truck_distance_text {
-    font-size: 1.5rem;
-  }
-  .truck_distance_container {
-    height: 58px;
-  }
-  .truck_opensign_container {
-    height: 71px;
-  }
-  .truck_open_maincontainer {
-    max-width: 386px;
-  }
-  .truck_closed_maincontainer {
-    max-width: 386px;
-  }
-  .truck_name_text {
-    font-size: 1.5rem;
-  }
-  .truck_opensign_text {
-    font-size: 1.5rem;
-  }
-  .nav-header-text {
-    font-size: 0.75rem;
-    padding: 22px 0 10px 10px;
-  }
-}
